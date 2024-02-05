@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin-right: 0;
+}
+
+.landing, .box-section {
+  height: auto;
+  width: 75%;
+  border-radius: 50px;
+  padding: var(--main-padding);
+  margin-bottom: var(--main-margin);
+  display: flex;
+  border: 5px solid black;
+  align-items: center;
+  flex-direction: row;
+}
+
+.landing img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.landing .container-landing {
+  position: relative;
+  color: var(--secondry-color);
+  margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  .container-landing {
+    width: 750px;
+  }
+}
+
+@media (min-width: 970px) {
+  .container-landing {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-landing {
+    width: 1170px;
+  }
+}
+
+.Text {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.Text .name::selection,
+.Text .title::selection,
+Text.job::selection {
+  color: transparent;
+  background-color: rgb(8, 1, 1);
+}
+
+.Text .title {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+.job {
+  font-size: 1.5rem;
+}
+
+.my-Work-btn, .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  position: relative;
+  transition: color 0.3s linear;
+  /* background-color: #d6d5d2; */
+  background-color: transparent;
+  border: black solid 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+.photo-handler {
+  min-width: 250px;
+  min-height: 250px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+@keyframes motion {
+  0% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+.more-btn a:hover span {
+  background-color: var(--secondry-color);
+}

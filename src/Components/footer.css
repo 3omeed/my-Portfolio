@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  padding: 50px 10px;
+  border-top: 5px solid black;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #c6c5c2;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.bold {
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer a {
+  text-decoration: none;
+  transform: scale(0);
+  color: black;
+}
+
+.footer a:hover {
+  transform: scale(1.5);
+}
+
+.phone {
+  margin: 0 10px;
+}

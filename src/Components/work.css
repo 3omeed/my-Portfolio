@@ -1,0 +1,59 @@
+.work {
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.work-container {
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  /* background-color: white; */
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.back,
+.forward {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.back {
+  left: 0%;
+}
+.forward {
+  right: 0%;
+}
+.back::before , .forward::before {
+  border-radius: 50%;
+}
+
+
+.work-pallete {
+    width: 100%;
+    margin: 0 15px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work a {
+    height: 100%;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.work img {
+    height: 100%;
+}
+
+.work .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
