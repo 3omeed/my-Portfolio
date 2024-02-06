@@ -17,11 +17,15 @@
 .forward {
   width: 50px;
   height: 50px;
+  font-size: 2rem;
   border-radius: 50%;
+  background-color: transparent;
+  font-family: 'bold-poppins';
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
+  transition: all 0.3s linear;
 }
 .back {
   left: 0%;
@@ -29,31 +33,83 @@
 .forward {
   right: 0%;
 }
-.back::before , .forward::before {
+.back::before,
+.forward::before {
   border-radius: 50%;
 }
 
+.forward:hover, .back:hover {
+  background-color: black;
+  color: white;
+}
+
+
 
 .work-pallete {
-    width: 100%;
-    margin: 0 15px;
-    padding: 20px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  margin: 0 15px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-handler {
+  margin: 0 20px;
 }
 
 .work a {
-    height: 100%;
-    margin: 0 10px;
-    text-align: center;
-    font-size: 1rem;
+  height: 100%;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
 }
 .work img {
-    height: 100%;
+  height: 100%;
+  border-radius: 0;
+  width: 100%;
+  position: relative;
+}
+/* .work img::before {
+  content: '';
+  background-color: rgba(0, 255, 38, 0.1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+} */
+
+.work .overlay-project {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s linear;
+}
+.work .overlay-project:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.work .overlay-project p {
+  transform: scale(0);
 }
 
-.work .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+.date {
+  font-size: 0.8rem;
+}
+.p-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.work .overlay-project:hover p {
+  transform: scale(1);
 }

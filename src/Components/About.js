@@ -1,11 +1,18 @@
 import React from 'react';
-import ProfilePhoto from '../imgs/photo-of-a-21-years-old-white-egyptian-guy-with-a-pair-of-black-glasses-and-brown-hair.jpg';
+import ProfilePhoto from './imgs/pf.jpg';
 import './AboutStyle.css';
-import { saveAs } from 'file-saver';
+import cv from '../abdelrahman emad cv.pdf';
+import fileSaver from 'file-saver'
 
 function About() {
-  const saveFile = () => {
-    saveAs(process.env.PUBLIC_URL + '../abdelrahman emad cv.pdf', 'MyCV.pdf');
+  const saveFileHandler = () => {
+    const aTag = document.createElement("a");
+    const url = process.env.PUBLIC_URL + cv;
+    aTag.href = url;
+    aTag.download = cv;
+    document.body.appendChild(aTag);
+    aTag.click();
+    document.body.removeChild(aTag)
   };
   return (
     <div id="About">
@@ -30,7 +37,7 @@ function About() {
               <img src={ProfilePhoto} alt="profile"></img>
             </div>
           </div>
-          <div className="cv-btn btn" onClick={saveFile}>
+          <div className="cv-btn btn" onClick={() => saveFileHandler(cv)}>
             Download my CV
           </div>
         </div>

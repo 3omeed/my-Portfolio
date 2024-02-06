@@ -1,12 +1,11 @@
 import React from 'react';
 import './LandingStyle.css';
 // import photo from '../imgs/jez-timms-HauxSOFvh6k-unsplash.jpg'
-// import photo from '../imgs/mae-mu-vbAEHCrvXZ0-unsplash.jpg';
+import photo from './imgs/pf.jpg';
 
 function Landing() {
   return (
-    <div className="landing box-section" id='Landing'>
-      
+    <div className="landing box-section" id="Landing">
       <div className="container-landing">
         <div className="Text">
           <p className="name">I'm Abdelrahman Emad</p>
@@ -17,10 +16,10 @@ function Landing() {
             challenges to continually refine and expand my skills.
           </p>
         </div>
-        <button className='my-Work-btn btn'>My Work</button>
+        <a href='#Work' className="my-Work-btn btn">My Work</a>
       </div>
       <div className="photo-handler">
-        <img src='../imgs/design_name_Abdelrahman_Emad.jpg' alt='personal-pic' />
+        <img src={photo} alt="personal-pic" />
       </div>
     </div>
   );

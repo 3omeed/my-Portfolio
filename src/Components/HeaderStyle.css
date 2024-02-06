@@ -14,18 +14,27 @@
 }
 
 html {
-    background-color: #d6d5d2;
+  background-color: #d6d5d2;
 }
 
 @font-face {
   font-family: 'poppins';
-  src: url('../font/Poppins-Regular.ttf'), url('../font/Poppins-Bold.ttf');
+  src: url('../../public/assets/font/Poppins-Regular.ttf');
 }
+@font-face {
+  font-family: 'bold-poppins';
+  src: url('../../public/assets/font/Poppins-Bold.ttf');
+}
+
 * {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
   font-family: 'poppins';
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 header {
   color: black;
@@ -82,12 +91,12 @@ header {
   color: var(--main-color);
 }
 
-.info i {
+.info p i {
   display: inline-block;
   margin: 0 10px;
 }
 
-img {
+.info img {
   margin: 0 10px;
   width: 40px;
   height: 40px;
@@ -112,7 +121,6 @@ header a {
   transition: all 0.1s linear;
   font-size: 1rem;
   font-weight: 800;
-
 }
 
 .nav a::selection {
@@ -121,8 +129,8 @@ header a {
 
 header a:hover {
   /* background-color: var(--secondry-color); */
-  background-color: white;
-  color: var(--secondry-color);
+  background-color: black;
+  color: white;
   transform: rotate(10deg);
   transform: scale(1.09);
 }
@@ -133,7 +141,10 @@ header a:hover {
   /* justify-content: center; */
   margin: 20px 25px;
 }
-
+.icons a {
+  /* background-color: blue; */
+  padding: 5px;
+}
 .icons i {
   margin: 0 5px;
   color: black;
@@ -145,8 +156,7 @@ header a:hover {
 .icons i:hover {
   /* color: white; */
   /* background-color: white; */
-  color: var(--secondry-color);
+  color: white;
   transform: rotate(10deg);
   transform: scale(1.09);
 }
-
