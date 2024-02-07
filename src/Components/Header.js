@@ -20,7 +20,7 @@ function Header() {
         </div>
 
         <div className="icons">
-          <a
+          {/* <a
             href="https://www.facebook.com/abdo.emad.1023611"
             target="_blank"
             rel="noreferrer"
@@ -33,7 +33,7 @@ function Header() {
             rel="noreferrer"
           >
             <i className="fa-brands fa-instagram"></i>
-          </a>
+          </a> */}
           <a
             href="https://www.linkedin.com/in/abdelrahman-emad-57bb10237/"
             target="_blank"

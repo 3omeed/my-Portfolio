@@ -38,7 +38,7 @@ function About() {
             </div>
           </div>
           <div className="cv-btn btn" onClick={() => saveFileHandler(cv)}>
-            Download my CV
+            Download CV
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './work.css';
 import kasper from './work-photos/kasper-Template.jpeg';
+// import kasper from '../../assets/imgs/pf.jpg';
 import Leon from './work-photos/Leon-Template.jpeg';
 import TicTacToe from './work-photos/technical-doc.jpeg';
 import Todo from './work-photos/portfolio.jpeg';

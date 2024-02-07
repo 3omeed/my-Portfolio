@@ -19,12 +19,37 @@ html {
 
 @font-face {
   font-family: 'poppins';
-  src: url('../../public/assets/font/Poppins-Regular.ttf');
+  src: url('../Protest_Riot/ProtestRiot-Regular.ttf');
 }
 @font-face {
   font-family: 'bold-poppins';
   src: url('../../public/assets/font/Poppins-Bold.ttf');
 }
+/* @font-face {
+  font-family: 'poppins';
+  src: url('../Lobster/Lobster-Regular.ttf');
+}
+@font-face {
+  font-family: 'bold-poppins';
+  src: url('../../public/assets/font/Poppins-Bold.ttf');
+} */
+/* 
+@font-face {
+  font-family: 'poppins';
+  src: url('../Honk/static/Honk-Regular.ttf');
+}
+@font-face {
+  font-family: 'bold-poppins';
+  src: url('../../public/assets/font/Poppins-Bold.ttf');
+} */
+/* @font-face {
+  font-family: 'poppins';
+  src: url('../../public/assets/font/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'bold-poppins';
+  src: url('../../public/assets/font/Poppins-Bold.ttf');
+} */
 
 * {
   padding: 0;
@@ -159,4 +184,9 @@ header a:hover {
   color: white;
   transform: rotate(10deg);
   transform: scale(1.09);
+}
+
+
+@media screen and (max-width: 979px) {
+  
 }
