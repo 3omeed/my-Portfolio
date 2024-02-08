@@ -39,6 +39,17 @@ h4 {
   color: #34495e;
   font-size: 1.02rem;
 }
+@media screen and (max-width: 510px) {
+  .personal-data {
+    width: 100%;
+  }
+  @media screen and (max-width: 320px) {
+   
+    .footer a {
+      font-size: 0.8rem;
+    }
+  }
+}
 
 .phone {
   margin: 0 10px;

@@ -44,7 +44,7 @@ function About() {
               </div>
             </div>
             <div className="my-photo section">
-              <img src={ProfilePhoto} alt="profile"></img>
+              {/* <img src={ProfilePhoto} alt="profile"></img> */}
             </div>
           </div>
           <div className="cv-btn btn" onClick={() => saveFileHandler(cv)}>

@@ -44,6 +44,7 @@
   position: relative;
   color: var(--secondry-color);
   margin: 20px auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -64,7 +65,7 @@
 }
 
 .Text {
-  font-size: 2.5rem;
+  font-size: 2.36rem;
   font-weight: 500;
   text-transform: uppercase;
   margin: 25px 0;

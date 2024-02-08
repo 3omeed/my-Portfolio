@@ -46,34 +46,18 @@ function Work() {
     {
       name: 'To-Do-list',
       date: 'June 2022',
-      link: 'https://3omeed.github.io/template-1/',
+      link: 'https://gorgeous-croquembouche-952600.netlify.app/',
       photo: TodoList,
       position: 4,
     },
     {
       name: 'tic-tac-toe',
       date: 'June 2022',
-      link: 'https://3omeed.github.io/template-1/',
+      link: 'https://vocal-blini-c2539a.netlify.app/',
       photo: TicTacToe,
       position: 5,
     },
   ];
-
-  // const clickHandler = (type) => {
-  //   if ((type = 'forward'))
-  //     for (let i = 0; i < work.length; i++) {
-  //       const project = work[i];
-  //       project.position -= 1;
-  //       console.log(project.position);
-  //     }
-  //   else if ((type = 'back')) {
-  //     for (let i = 0; i < work.length; i++) {
-  //       const project = work[i];
-  //       project.position += 1;
-  //       console.log(project.position);
-  //     }
-  //   }
-  // };
 
   const settings = {
     dots: false,
@@ -113,14 +97,6 @@ function Work() {
     <div className="work box-section" id="Work">
       <h2 className="Heading">My Work</h2>
       <div className="work-container">
-        {/* <button
-          className="back"
-          onClick={() => {
-            clickHandler('back');
-          }}
-        >
-          {'<'}
-        </button> */}
         <div className="work-pallete">
           <Slider {...settings}>
             {work.map((project, index) => {
@@ -144,8 +120,6 @@ function Work() {
             })}
           </Slider>
         </div>
-
-        {/* <button className="forward">{'>'}</button> */}
       </div>
     </div>
   );
