@@ -5,66 +5,61 @@
 }
 .work-container {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   margin: 10px auto;
   /* background-color: white; */
   display: flex;
   position: relative;
   align-items: center;
-}
-
-.back,
-.forward {
-  width: 50px;
-  height: 50px;
-  font-size: 2rem;
-  border-radius: 50%;
-  background-color: transparent;
-  font-family: 'bold-poppins';
-  display: flex;
-  align-items: center;
   justify-content: center;
-  position: absolute;
-  transition: all 0.3s linear;
 }
-.back {
-  left: 0%;
-}
-.forward {
-  right: 0%;
-}
-.back::before,
-.forward::before {
-  border-radius: 50%;
-}
-
-.forward:hover, .back:hover {
-  background-color: black;
-  color: white;
-}
-
-
-
 .work-pallete {
   width: 100%;
-  margin: 0 15px;
-  padding: 20px 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  /* margin: 0 15px; */
 }
 .project-handler {
-  margin: 0 20px;
+  /* margin: 0 10px; */
+  /* min-width: 25%; */
+  /* height: 100%; */
+  /* text-align: center; */
+  font-size: 1rem;
+  position: relative;
+  /* margin: 0 20px; */
+}
+
+.work .slick-next, .work .slick-prev {
+  border-radius: 0px;
+}
+.work .slick-prev:before, .work .slick-next:before {
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0;
+}
+
+.work .slick-prev:before {
+  left: -20px;
+}
+.work .slick-next:before {
+  right: -20px;
+}
+
+@media screen and (max-width: 425px) {
+  .work button {
+    display: none;
+    position: absolute;
+    left: 100px;
+  }
 }
 
 .work a {
-  height: 100%;
-  margin-right: 10px;
-  text-align: center;
-  font-size: 1rem;
-  position: relative;
+  transform: scale(1) rotate(0deg);
 }
+.project-handler:hover .work a {
+  transform: scale(1.1) rotate(25deg);
+}
+
 .work img {
   height: 100%;
   border-radius: 0;
@@ -93,13 +88,15 @@
   position: absolute;
   right: 0;
   top: 0;
-  transition: all 0.3s linear;
+  transition: transform 0.3s linear;
 }
 .work .overlay-project:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .work .overlay-project p {
   transform: scale(0);
+  transition: all 0.3s linear;
+  /* transform-origin: 50  ; */
 }
 
 .date {
@@ -113,3 +110,35 @@
 .work .overlay-project:hover p {
   transform: scale(1);
 }
+/* 
+.back,
+.forward {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: 'bold-poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s linear;
+} */
+/* .back {
+  left: 0%;
+}
+.forward {
+  right: 0%;
+}
+.back::before,
+.forward::before {
+  border-radius: 50%;
+}
+
+.forward:hover,
+.back:hover {
+  background-color: black;
+  color: white;
+} */

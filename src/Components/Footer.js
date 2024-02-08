@@ -4,8 +4,8 @@ import './footer.css';
 function Footer() {
   return (
     <div className="footer">
-      <div className="personal-data">
         <h4 className='bold'>ITS A PLEASURE..!</h4>
+      <div className="personal-data">
         <p>
           <span className="bold">Address :</span>Egypt - Cairo
         </p>

@@ -2,17 +2,17 @@ import React from 'react';
 import ProfilePhoto from './imgs/pf.jpg';
 import './AboutStyle.css';
 import cv from '../abdelrahman emad cv.pdf';
-import fileSaver from 'file-saver'
+import fileSaver from 'file-saver';
 
 function About() {
   const saveFileHandler = () => {
-    const aTag = document.createElement("a");
+    const aTag = document.createElement('a');
     const url = process.env.PUBLIC_URL + cv;
     aTag.href = url;
     aTag.download = cv;
     document.body.appendChild(aTag);
     aTag.click();
-    document.body.removeChild(aTag)
+    document.body.removeChild(aTag);
   };
   return (
     <div id="About">
@@ -32,6 +32,16 @@ function About() {
                 experiences. I have learned HTML, CSS, JavaScript and react.js
                 and build alot of projects with them, hope yours is next
               </p>
+              <div className="stack">
+                Tech Stack |{' '}
+                <span className="tech-icons">
+                  {' '}
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt" ></i>
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-react"></i>
+                </span>
+              </div>
             </div>
             <div className="my-photo section">
               <img src={ProfilePhoto} alt="profile"></img>

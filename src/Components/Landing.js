@@ -1,7 +1,7 @@
 import React from 'react';
 import './LandingStyle.css';
 // import photo from '../imgs/jez-timms-HauxSOFvh6k-unsplash.jpg'
-import photo from './imgs/pf.jpg';
+import photo from './imgs/WhatsApp Image 2023-03-24 at 13.10.24.jpg';
 
 function Landing() {
   return (
@@ -16,7 +16,9 @@ function Landing() {
             challenges to continually refine and expand my skills.
           </p>
         </div>
-        <a href='#Work' className="my-Work-btn btn">My Work</a>
+        <a href="#Work" className="my-Work-btn btn">
+          My Work
+        </a>
       </div>
       <div className="photo-handler">
         <img src={photo} alt="personal-pic" />
