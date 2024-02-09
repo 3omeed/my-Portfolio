@@ -106,12 +106,17 @@ i.fa-react {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   font-size: 1.5rem;
   padding: 0 0 15px;
   /* line-height: 1; */
 }
 .flag {
   margin-left: 5px;
+}
+@media screen and (max-width: 426px) {
+  .flag {
+  }
 }
 
 .cv-btn {

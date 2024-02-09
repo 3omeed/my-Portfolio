@@ -60,7 +60,7 @@
   right: -25px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .work button {
     display: none;
     position: absolute;
@@ -71,6 +71,12 @@
   }
   .work .slick-next:before {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick-prev::before , .slick-next::before {
+    font-size: 30px;
   }
 }
 
