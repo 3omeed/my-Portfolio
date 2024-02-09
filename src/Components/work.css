@@ -1,31 +1,33 @@
-.work {
+#Work {
   justify-content: center;
   flex-direction: column;
-  /* align-items: center; */
+  height: auto;
+  width: 90%;
+  padding: var(--main-padding);
+  margin-bottom: var(--main-margin);
+  display: flex;
+  border: 5px solid black;
+  align-items: center;
+  border-left: none;
+  border-right: none;
 }
 .work-container {
   width: 100%;
-  /* height: auto; */
   margin: 10px auto;
-  /* background-color: white; */
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
 }
+
+
 .work-pallete {
   width: 100%;
-  /* margin: 0 15px; */
 }
 .project-handler {
-  /* margin: 0 10px; */
-  /* min-width: 25%; */
-  /* height: 100%; */
-  /* text-align: center; */
   font-size: 1rem;
   position: relative;
-  /* margin: 0 20px; */
 }
 .work .slick-track {
   display: flex;
@@ -36,10 +38,6 @@
   margin-left: 10px;
   margin-right: 10px;
   user-select: none;
-}
-
-.work .slick-slide::selection {
-
 }
 
 .work .slick-next,
@@ -56,10 +54,10 @@
 }
 
 .work .slick-prev:before {
-  left: -10px;
+  left: -25px;
 }
 .work .slick-next:before {
-  right: -10px;
+  right: -25px;
 }
 
 @media screen and (max-width: 425px) {
@@ -78,6 +76,7 @@
 
 .work a {
   transform: scale(1) rotate(0deg);
+  transition: all 0.3s linear;
 }
 .project-handler:hover .work a {
   transform: scale(1.1) rotate(25deg);
@@ -89,15 +88,6 @@
   width: 100%;
   position: relative;
 }
-/* .work img::before {
-  content: '';
-  background-color: rgba(0, 255, 38, 0.1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-} */
 
 .work .overlay-project {
   background-color: rgba(0, 0, 0, 0);
@@ -111,7 +101,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  transition: transform 0.3s linear;
+  transition: all 0.4s ease;
 }
 .work .overlay-project:hover {
   background-color: rgba(0, 0, 0, 0.7);
@@ -119,7 +109,6 @@
 .work .overlay-project p {
   transform: scale(0);
   transition: all 0.3s linear;
-  /* transform-origin: 50  ; */
 }
 
 .date {
@@ -133,35 +122,3 @@
 .work .overlay-project:hover p {
   transform: scale(1);
 }
-/* 
-.back,
-.forward {
-  width: 50px;
-  height: 50px;
-  font-size: 2rem;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  font-family: 'bold-poppins';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 1;
-  transition: all 0.3s linear;
-} */
-/* .back {
-  left: 0%;
-}
-.forward {
-  right: 0%;
-}
-.back::before,
-.forward::before {
-  border-radius: 50%;
-}
-
-.forward:hover,
-.back:hover {
-  background-color: black;
-  color: white;
-} */

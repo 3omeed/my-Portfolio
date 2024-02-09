@@ -1,14 +1,12 @@
 #About {
   color: black;
   border: 5px solid black;
-  /* border-radius: 50px; */
   margin-bottom: var(--main-margin);
   padding: var(--main-padding);
   width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 #About .container {
   align-items: center;
@@ -31,10 +29,6 @@
   width: auto;
 }
 
-/* #About .container {
-    margin-top: 50px;
-} */
-
 #About .box {
   display: flex;
 }
@@ -55,10 +49,7 @@ i.fa-css3-alt {
 }
 i.fa-js {
   color: yellow;
-  /* background-color: black; */
-  /* padding: 0; */
   position: relative;
-  /* border: 0; */
 }
 
 i.fa-js::after {
@@ -79,7 +70,6 @@ i.fa-react {
   width: 20%;
   height: 70%;
   display: flex;
-  /* flex-grow: 1; */
   border: solid 3px black;
 }
 
@@ -93,11 +83,11 @@ i.fa-react {
 #About .About-me-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   margin: 50px 5px;
   font-size: 1.3rem;
-  /* letter-spacing: 2px; */
+  text-align: center;
 }
 .About-me-content .section:first-child {
   width: 70%;
@@ -108,27 +98,28 @@ i.fa-react {
   color: black;
   font-size: 1.2rem;
 }
+
+/* flag */
+
 .boldy {
   font-weight: 800;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
   padding: 0 0 15px;
+  /* line-height: 1; */
 }
-
-/* #About .section {
-    width: 40%;
-    background-color: #0d112b;
-    padding: 20px;
-    display: flex;
-    margin: 10px;
-} */
+.flag {
+  margin-left: 5px;
+}
 
 .cv-btn {
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 @media screen and (max-width: 768px) {
   #About {
@@ -192,7 +183,8 @@ i.fa-react {
   #About i {
     margin: 1px 15px;
     font-size: 2rem;
-  } 
+  }
   .cv-btn {
     min-width: 120px;
-  }}
+  }
+}

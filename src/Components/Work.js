@@ -5,13 +5,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import kasper from './work-photos/kasper-Template.jpeg';
-// import kasper from '../../assets/imgs/pf.jpg';
-import Leon from './work-photos/Leon-Template.jpeg';
-import web from './work-photos/technical-doc.jpeg';
-import FCCPortfolio from './work-photos/portfolio.jpeg';
-import TodoList from './work-photos/todo-list.jpeg';
-import TicTacToe from './work-photos/tictactoe.png';
+import kasper from '../assets/work-photos/kasper-Template.jpeg';
+import Leon from '../assets/work-photos/Leon-Template.jpeg';
+import web from '../assets/work-photos/technical-doc.jpeg';
+import FCCPortfolio from '../assets/work-photos/portfolio.jpeg';
+import TodoList from '../assets/work-photos/todo-list.jpeg';
+import TicTacToe from '../assets/work-photos/tictactoe.png';
 
 function Work() {
   const work = [
@@ -94,7 +93,7 @@ function Work() {
     ],
   };
   return (
-    <div className="work box-section" id="Work">
+    <div className="work " id="Work">
       <h2 className="Heading">My Work</h2>
       <div className="work-container">
         <div className="work-pallete">

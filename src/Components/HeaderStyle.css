@@ -4,51 +4,22 @@
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/mail.css');
 
 :root {
-  /* --main-color: rgb(48, 45, 45); */
   --main-color: #001f26;
   --secondry-color: #001f26;
   --main-margin: 50px;
   --main-padding: 80px 40px;
-  /* --secondry-color: teal; */
-  /* --secondry-color: #ff9c00; */
 }
-
 html {
   background-color: #d6d5d2;
 }
 
-/* @font-face {
+@font-face {
   font-family: 'poppins';
-  src: url('../Protest_Riot/ProtestRiot-Regular.ttf');
+  src: url('../assets/font/Poppins-Regular.ttf');
 }
 @font-face {
   font-family: 'bold-poppins';
-  src: url('../../public/assets/font/Poppins-Bold.ttf');
-} */
-/* @font-face {
-  font-family: 'poppins';
-  src: url('../Lobster/Lobster-Regular.ttf');
-}
-@font-face {
-  font-family: 'bold-poppins';
-  src: url('../../public/assets/font/Poppins-Bold.ttf');
-} */
-/* 
-@font-face {
-  font-family: 'poppins';
-  src: url('../Honk/static/Honk-Regular.ttf');
-}
-@font-face {
-  font-family: 'bold-poppins';
-  src: url('../../public/assets/font/Poppins-Bold.ttf');
-} */
-@font-face {
-  font-family: 'poppins';
-  src: url('../../public/assets/font/Poppins-Regular.ttf');
-}
-@font-face {
-  font-family: 'bold-poppins';
-  src: url('../../public/assets/font/Poppins-Bold.ttf');
+  src: url('../assets/font/Poppins-Bold.ttf');
 }
 
 * {
@@ -65,7 +36,6 @@ header {
   color: black;
   width: 100%;
   margin-bottom: var(--main-margin);
-  /* border-bottom: 5px solid black; */
   background-color: #d6d5d2;
 }
 .container {
@@ -73,7 +43,6 @@ header {
   margin: 0 auto;
   padding: 0 15px;
   flex-direction: column;
-  /* width: 100%; */
 }
 @media (min-width: 768px) {
   .container {
@@ -93,7 +62,6 @@ header {
 }
 
 .nav {
-  /* height: 300px; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -132,7 +100,6 @@ header a {
   padding: 5px 5px;
   background-color: transparent;
   color: white;
-  /* border-radius: 30px; */
   text-decoration: none;
   transition: all 0.1s linear;
 }
@@ -151,7 +118,6 @@ header a {
   margin: 0 auto;
   background-color: transparent;
   color: black;
-  /* border-radius: 10px; */
   text-decoration: none;
   transition: all 0.1s linear;
   font-size: 1rem;
@@ -172,8 +138,6 @@ header a {
 }
 
 header a:hover {
-  /* background-color: var(--secondry-color); */
-  /* background-color: black; */
   color: white;
   transform: rotate(10deg);
   transform: scale(1.09);
@@ -182,7 +146,6 @@ header a:hover {
 .icons {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   margin: 20px 25px;
 }
 header .icons a {
@@ -190,28 +153,16 @@ header .icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: fit-content; */
   padding: 10px;
   margin: 0px 10px;
 }
 .icons i {
-  /* margin: 0 10px; */
-  /* padding: 5px; */
   color: black;
   font-size: 1.4rem;
   transition: all 0.2s ease-in-out;
-  /* transition-delay: 0.3s; */
 }
 
 .icons i:hover {
-  /* color: white; */
-  /* background-color: black; */
-  /* color: white; */
   transform: rotate(10deg);
   transform: scale(1.09);
-}
-/* header .icons a:hover .icons i {
-  color: white;
-} */
-@media screen and (max-width: 979px) {
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import './LandingStyle.css';
-// import photo from '../imgs/jez-timms-HauxSOFvh6k-unsplash.jpg'
-import photo from './imgs/WhatsApp Image 2023-03-24 at 13.10.24.jpg';
+import photo from '../assets/work-photos/WhatsApp Image 2023-03-24 at 13.10.24.jpg';
 
 function Landing() {
   return (
