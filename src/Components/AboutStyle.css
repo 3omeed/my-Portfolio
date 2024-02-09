@@ -114,11 +114,6 @@ i.fa-react {
 .flag {
   margin-left: 5px;
 }
-@media screen and (max-width: 426px) {
-  .flag {
-  }
-}
-
 .cv-btn {
   width: 25%;
   display: flex;

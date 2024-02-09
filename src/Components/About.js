@@ -1,8 +1,6 @@
 import React from 'react';
-// import ProfilePhoto from './imgs/pf.jpg';
 import './AboutStyle.css';
 import cv from '../assets/abdelrahman emad cv.pdf';
-// import fileSaver from 'file-saver';
 import flag from "../assets/work-photos/egypt-flag.svg"
 
 function About() {
