@@ -40,7 +40,7 @@ function Contact() {
       <p className="quote">Ready To Transform Your Bussiness?</p>
       <span id="arrow">&#8595;</span>
       <div id="together" className="bold">
-        <a  href='mailto:abdelrahmanemad2712@gmail.com'>Let's Work together</a>
+        <a href="mailto:abdelrahmanemad2712@gmail.com">Let's Work together</a>
       </div>
       <div className="contact-form">
         <form onSubmit={submitHandler}>
