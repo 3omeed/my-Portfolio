@@ -37,7 +37,12 @@
   width: 20%;
   margin-left: 10px;
   margin-right: 10px;
-  user-select: none;
+  border: solid 5px black;
+  padding: 4px;
+}
+
+.work .slick-slide > div {
+  display: flex;
 }
 
 .work .slick-next,
@@ -111,6 +116,7 @@
 }
 .work .overlay-project:hover {
   background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(194, 193, 190,0.8) */
 }
 .work .overlay-project p {
   transform: scale(0);

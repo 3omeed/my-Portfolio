@@ -11,7 +11,7 @@ function Footer() {
         </p>
         <div>
           <span className="bold">Email :</span>
-          <a className="my-mail" href='mailto:abdelrahmanemad2712@gmail.com'>
+          <a className="my-mail" href="mailto:abdelrahmanemad2712@gmail.com">
             abdelrahmanemad2712@gmail.com
           </a>
         </div>
