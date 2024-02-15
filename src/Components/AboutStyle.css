@@ -1,6 +1,6 @@
 #About {
-  color: black;
-  border: 5px solid black;
+  /* color: black; */
+  border: 5px solid var(--border-color);
   margin-bottom: var(--main-margin);
   padding: var(--main-padding);
   width: 75%;
@@ -15,7 +15,7 @@
   font-size: 4rem;
   font-weight: 800;
   border-bottom: 3px solid;
-  color: black;
+  /* color: black; */
   text-align: center;
 }
 
@@ -70,7 +70,7 @@ i.fa-react {
   width: 20%;
   height: 70%;
   display: flex;
-  border: solid 3px black;
+  border: solid 3px var(--border-color);
 }
 
 #About .my-photo img {
@@ -95,7 +95,7 @@ i.fa-react {
 
 #About p {
   width: 100%;
-  color: black;
+  /* color: black; */
   font-size: 1.2rem;
 }
 
@@ -144,7 +144,7 @@ i.fa-react {
   }
   #About p {
     width: 100%;
-    color: black;
+    /* color: black; */
     font-size: 1.2rem;
     text-align: center;
   }

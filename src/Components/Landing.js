@@ -3,7 +3,7 @@ import photo from '../assets/work-photos/IMG_02.jpg';
 import { useEffect, useState } from 'react';
 import { Motion, spring } from 'react-motion';
 
-function Landing() {
+function Landing(isNightMode) {
 
   const [scrollPos, setScrollPos] = useState(0);
   const [animate, setAnimate] = useState(false);
@@ -54,7 +54,7 @@ function Landing() {
             </div>
           )}
         </Motion>
-        <a href="#Work" className="my-Work-btn btn">
+        <a href="#Work" className={`my-Work-btn btn`}>
           My Work
         </a>
       </div>

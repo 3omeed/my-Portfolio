@@ -35,16 +35,15 @@
   font-size: 1.4rem;
   margin-bottom: 20px;
   padding: 5px;
-  border: 2px solid ;
+  border: 2px solid;
   position: relative;
   animation: together alternate infinite;
-  box-shadow: black 5px 5px 1px 1px;
+  box-shadow: var(--border-color) 5px 5px 1px 1px;
   overflow: hidden;
-  
 }
 
 #together::before {
-  content: "";
+  content: '';
   background-color: #d6d5d2;
   border: 1px solid;
   width: 25px;
@@ -60,8 +59,6 @@
   left: 115%;
 }
 
-
-
 .contact-form {
   width: 100%;
   display: flex;
@@ -73,7 +70,7 @@ form {
   width: 50%;
   flex-direction: column;
   padding: 20px;
-  border: solid 3px;
+  border: solid 3px var(--border-color);
   border-radius: 10px;
 }
 form label {
@@ -84,7 +81,7 @@ form input {
   margin: 10px 0;
   background-color: transparent;
   border-radius: 10px;
-  border: solid 3px;
+  border: solid 3px var(--border-color);
 }
 form textarea {
   padding: 10px;
@@ -93,7 +90,11 @@ form textarea {
   overflow-y: hidden;
   background-color: transparent;
   border-radius: 10px;
-  border: solid 3px;
+  border: solid 3px var(--border-color);
+}
+form .btn {
+  color: var(--border-color);
+
 }
 
 @media screen and (max-width: 768px) {
@@ -116,7 +117,7 @@ form textarea {
     width: 100%;
     flex-direction: column;
     padding: 12px;
-    border: solid 3px;
+    border: solid 3px var(--border-color);
     border-radius: 10px;
   }
   form label {
@@ -127,7 +128,7 @@ form textarea {
     margin: 10px 0;
     background-color: transparent;
     border-radius: 10px;
-    border: solid 3px;
+    border: solid 3px var(--border-color);
   }
   form textarea {
     padding: 10px;
@@ -136,6 +137,6 @@ form textarea {
     overflow-y: hidden;
     background-color: transparent;
     border-radius: 10px;
-    border: solid 3px;
+    border: solid 3px var(--border-color);
   }
 }

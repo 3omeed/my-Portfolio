@@ -4,13 +4,25 @@
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/mail.css');
 
 :root {
-  --main-color: #d6d5d2; 
-  --secondry-color: #001f26;
+  --main-color: #d6d5d2;
+  --border-color: black;
   --main-margin: 50px;
   --main-padding: 80px 40px;
 }
-html {
+.App {
   background-color: #d6d5d2;
+  /* color: black; */
+}
+.App.night-mode {
+  background-color: black;
+  color: #d6d5d2;
+  transition: all 0.4s ease-in-out;
+}
+
+.night-mode {
+  color: white;
+  background-color: transparent;
+  border-color: white;
 }
 
 @font-face {
@@ -27,22 +39,24 @@ html {
   margin: 0;
   scroll-behavior: smooth;
   font-family: 'poppins';
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: var(--border-color);
 }
 header {
-  color: black;
+  /* color: black; */
   width: 100%;
   margin-bottom: var(--main-margin);
-  background-color: #d6d5d2;
+  /* background-color: #d6d5d2; */
 }
 .container {
   display: flex;
   margin: 0 auto;
   padding: 0 15px;
   flex-direction: column;
+  transition: all 0.4s linear;
 }
 @media (min-width: 768px) {
   .container {
@@ -81,7 +95,7 @@ header {
 
 .info p::selection,
 .info p i::selection {
-  color: var(--main-color);
+  /* color: var(--main-color); */
 }
 
 .info p i {
@@ -99,7 +113,7 @@ header {
 header a {
   padding: 5px 5px;
   background-color: transparent;
-  color: white;
+  /* color: white; */
   text-decoration: none;
   transition: all 0.1s linear;
 }
@@ -117,7 +131,7 @@ header a {
   padding: 5px 10px;
   margin: 0 auto;
   background-color: transparent;
-  color: black;
+  /* color: black; */
   text-decoration: none;
   transition: all 0.1s linear;
   font-size: 1rem;
@@ -157,7 +171,7 @@ header .icons a {
   margin: 0px 10px;
 }
 .icons i {
-  color: black;
+  /* color: black; */
   font-size: 1.4rem;
   transition: all 0.2s ease-in-out;
 }
@@ -167,11 +181,10 @@ header .icons a {
   transform: scale(1.09);
 }
 
-
 .container .small {
   width: 120px;
-  padding: 5px;
-  font-size: 10px;
+  padding: 3px;
+  font-size: 14px;
 }
 
 .package {

@@ -1,12 +1,12 @@
 .footer {
   width: 100%;
   padding: 30px 10px;
-  border-top: 5px solid black;
+  border-top: 5px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #c6c5c2;
+  /* background-color: #c6c5c2; */
   font-size: 1rem;
   font-weight: 900;
 }
@@ -31,12 +31,12 @@ h4 {
 
 .footer a {
   text-decoration: none;
-  color: black;
+  /* color: black; */
   transition: all 0.1s linear;
 }
 
 .footer a:hover {
-  color: #34495e;
+  /* color: #34495e; */
   font-size: 1.02rem;
 }
 @media screen and (max-width: 510px) {

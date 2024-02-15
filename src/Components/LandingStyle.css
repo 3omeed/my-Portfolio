@@ -10,9 +10,10 @@
   padding: var(--main-padding);
   margin-bottom: var(--main-margin);
   display: flex;
-  border: 5px solid black;
+  border: 5px solid var(--border-color);
   align-items: center;
-  flex-direction: row;
+  justify-content: center;
+  /* flex-direction: row; */
   overflow: hidden;
 }
 
@@ -30,7 +31,7 @@
 
 .landing .container-landing {
   position: relative;
-  color: var(--secondry-color);
+  /* color: var(--secondry-color); */
   margin: 20px auto;
   width: 100%;
   display: flex;
@@ -88,16 +89,16 @@ Text.job::selection {
   font-weight: 600;
   position: relative;
   background-color: transparent;
-  border: black solid 3px;
+  border: var(--border-color) solid 3px;
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: black 5px 5px 1px 1px;
   overflow: hidden;
 }
 .btn::before {
-  content: "";
+  content: '';
   background-color: #d6d5d2;
-  border: 1px solid;
+  border: 1px solid var(--border-color);
   width: 25px;
   height: 150px;
   position: absolute;
@@ -113,7 +114,7 @@ Text.job::selection {
 .photo-handler {
   min-width: 250px;
   height: 350px;
-  border: 10px black;
+  border: 10px var(--border-color);
   border-style: double;
   display: flex;
   align-items: center;
@@ -127,7 +128,7 @@ Text.job::selection {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(214, 213, 210,0.05);
+  background-color: rgba(214, 213, 210, 0.05);
 }
 
 .photo-handler img {
@@ -137,7 +138,7 @@ Text.job::selection {
 }
 
 .more-btn a:hover span {
-  background-color: var(--secondry-color);
+  background-color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -147,7 +148,7 @@ Text.job::selection {
     flex-direction: column-reverse;
   }
   .landing .container-landing {
-    color: var(--secondry-color);
+    /* color: var(--secondry-color); */
     display: flex;
     flex-direction: column;
     justify-content: center;

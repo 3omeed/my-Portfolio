@@ -6,7 +6,7 @@
   padding: var(--main-padding);
   margin-bottom: var(--main-margin);
   display: flex;
-  border: 5px solid black;
+  border: 5px solid var(--border-color);
   align-items: center;
   border-left: none;
   border-right: none;
@@ -37,7 +37,7 @@
   width: 20%;
   margin-left: 10px;
   margin-right: 10px;
-  border: solid 5px black;
+  border: solid 5px var(--border-color);
   padding: 4px;
 }
 
@@ -52,7 +52,7 @@
 .work .slick-prev:before,
 .work .slick-next:before {
   font-size: 40px;
-  color: black;
+  /* color: black; */
   position: absolute;
   z-index: 1;
   border-radius: 0;
