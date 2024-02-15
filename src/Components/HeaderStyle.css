@@ -4,7 +4,7 @@
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/mail.css');
 
 :root {
-  --main-color: #001f26;
+  --main-color: #d6d5d2; 
   --secondry-color: #001f26;
   --main-margin: 50px;
   --main-padding: 80px 40px;
@@ -165,4 +165,17 @@ header .icons a {
 .icons i:hover {
   transform: rotate(10deg);
   transform: scale(1.09);
+}
+
+
+.container .small {
+  width: 120px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.package {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
