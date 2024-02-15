@@ -1,4 +1,4 @@
-import landing from './LandingStyle.css';
+import   './LandingStyle.css';
 import photo from '../assets/work-photos/IMG_02.jpg';
 import { useEffect, useState } from 'react';
 import { Motion, spring } from 'react-motion';

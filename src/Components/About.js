@@ -1,5 +1,5 @@
 import React from 'react';
-import about from './AboutStyle.css';
+import  './AboutStyle.css';
 import cv from '../assets/abdelrahman emad cv.pdf';
 import flag from '../assets/work-photos/egypt-flag.svg';
 

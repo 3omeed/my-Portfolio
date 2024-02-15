@@ -1,9 +1,9 @@
 import React from 'react';
-import work from './work.css';
+import './work.css';
 
 import Slider from 'react-slick';
-import slick from 'slick-carousel/slick/slick.css';
-import slickTheme from 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import kasper from '../assets/work-photos/kasper-Template.jpeg';
 import Leon from '../assets/work-photos/Leon-Template.jpeg';
