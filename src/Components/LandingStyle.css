@@ -7,7 +7,6 @@
 .box-section {
   height: auto;
   width: 75%;
-  /* border-radius: 50px; */
   padding: var(--main-padding);
   margin-bottom: var(--main-margin);
   display: flex;
@@ -87,9 +86,7 @@ Text.job::selection {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
-  /* border-radius: 10px; */
   position: relative;
-  /* transition: color 0.3s linear; */
   background-color: transparent;
   border: black solid 3px;
   text-transform: uppercase;
@@ -112,32 +109,6 @@ Text.job::selection {
 .btn:hover::before {
   left: 115%;
 }
-
-/* .btn::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: 0 0;
-  transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-}
-
-.btn:hover {
-  color: white;
-}
-
-.btn:hover::before {
-  transform: scaleX(1);
-} */
-
-
-
 
 .photo-handler {
   min-width: 250px;
