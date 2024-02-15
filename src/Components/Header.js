@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeaderStyle.css';
 import logo from '../assets/work-photos/design_name_Abdelrahman_Emad.jpg';
-import 'https://kit.fontawesome.com/889580adc0.js';
+import "../assets/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.css"
 
 function Header() {
   return (
