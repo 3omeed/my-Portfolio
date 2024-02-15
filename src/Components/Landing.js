@@ -1,11 +1,7 @@
-// import React, { useEffect, useState } from 'react';
-import './LandingStyle.css';
+import landing from './LandingStyle.css';
 import photo from '../assets/work-photos/IMG_02.jpg';
 import { useEffect, useState } from 'react';
-// import { Motion, spring, useAnimation, useIsPresent } from 'react-motion';
-// import { keyboard } from '@testing-library/user-event/dist/keyboard';
 import { Motion, spring } from 'react-motion';
-// import photo from '../assets/work-photos/IMG_03.jpg';
 
 function Landing() {
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import './AboutStyle.css';
+import about from './AboutStyle.css';
 import cv from '../assets/abdelrahman emad cv.pdf';
-import flag from "../assets/work-photos/egypt-flag.svg"
+import flag from '../assets/work-photos/egypt-flag.svg';
 
 function About() {
   const saveFileHandler = () => {
@@ -22,9 +22,8 @@ function About() {
             <div className="section">
               <p>
                 <span className="boldy">
-                  Hello! My name is Abdelrahman From Egypt <img className='flag'  src={flag} alt='Egypt'/>
-                  
-                  {/* <img src="../assets/work-photos/egypt-flag.jpg" alt="Egypt" /> */}
+                  Hello! My name is Abdelrahman From Egypt
+                  <img className="flag" src={flag} alt="Egypt" />
                 </span>
                 At 23, I'm a dedicated React developer with a fervor for
                 crafting creative and beautiful web pages. Eager to learn and
@@ -43,7 +42,6 @@ function About() {
                 </span>
               </div>
             </div>
-            {/* <div className="my-photo section"></div> */}
           </div>
           <div className="cv-btn btn" onClick={() => saveFileHandler(cv)}>
             Download CV

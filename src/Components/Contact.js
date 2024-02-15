@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './contact.css';
+import contact from './contact.css';
 import emailjs from 'emailjs-com';
 
 function Contact() {

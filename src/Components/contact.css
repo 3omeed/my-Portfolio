@@ -55,23 +55,11 @@
   transform: rotate(45deg);
   transition: all 0.6s linear;
 }
-/* #together::after {
-  content: "";
-  background-color: black;
-  width: 15px;
-  height: 150px;
-  position: absolute;
-  left: -100px;
-  top: -50px;
-  transform: rotate(45deg);
-  transition: all 0.5s linear;
-} */
+
 #together:hover::before {
   left: 115%;
 }
-/* #together:hover::after {
-  left: 110%;
-} */
+
 
 
 .contact-form {
