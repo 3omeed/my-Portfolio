@@ -7,7 +7,7 @@ function Footer() {
       <div className="personal-data">
         <div>
           <p>
-            <span className="bold">Address : </span> Egypt - Cairo
+            <span className="bold">Address : </span> Cairo - Egypt
           </p>
         </div>
         <div>
