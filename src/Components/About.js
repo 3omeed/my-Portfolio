@@ -1,7 +1,11 @@
 import React from 'react';
-import  './AboutStyle.css';
+import './AboutStyle.css';
 import cv from '../assets/abdelrahman emad cv.pdf';
 import flag from '../assets/work-photos/egypt-flag.svg';
+import HTML from '../assets/work-photos/html-5 (1).png';
+import Css from '../assets/work-photos/css-3.png';
+import JAVASCRIPT from '../assets/work-photos/js.png';
+import REACT from '../assets/work-photos/react.png';
 
 function About() {
   const saveFileHandler = () => {
@@ -35,10 +39,18 @@ function About() {
                 Tech Stack |{' '}
                 <span className="tech-icons">
                   {' '}
-                  <i class="fa-brands fa-html5"></i>
-                  <i class="fa-brands fa-css3-alt"></i>
-                  <i class="fa-brands fa-js"></i>
-                  <i class="fa-brands fa-react"></i>
+                  <i class="fa-brands fa-html5">
+                    <img src={HTML} alt=''className='icon'/>
+                  </i>
+                  <i class="fa-brands fa-css3-alt">
+                    <img src={Css} alt=''className='icon'/>
+                  </i>
+                  <i class="fa-brands fa-js">
+                    <img src={JAVASCRIPT} alt=''className='icon'/>
+                  </i>
+                  <i class="fa-brands fa-react">
+                    <img src={REACT} alt=''className='icon'/>
+                  </i>
                 </span>
               </div>
             </div>

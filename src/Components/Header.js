@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import './HeaderStyle.css';
 import logo from '../assets/work-photos/design_name_Abdelrahman_Emad.jpg';
+import code from "../assets/work-photos/code.png";
+import linkedIn from "../assets/work-photos/linkedin.png";
+import linkedInDark from "../assets/work-photos/linkedin-dark-wersion.png";
+import github from "../assets/work-photos/github.png";
+import mail from "../assets/work-photos/mail.png";
+import mailDark from "../assets/work-photos/emailDark.png";
 
 function Header(isNightMode) {
   return (
@@ -10,8 +16,8 @@ function Header(isNightMode) {
           <div className="info">
             <img src={logo} alt="logo" />
             <p>
-              Abdelrahman Emad .
-               <i className="gg-code-slash"> </i>
+              Abdelrahman Emad.
+               <i className="gg-code-slash"><img className='icon' src= {code} alt=''/> </i>
             </p>
           </div>
         </div>
@@ -23,17 +29,17 @@ function Header(isNightMode) {
             rel="noreferrer"
             className={`${isNightMode ? 'night-mode' : ''}`}
           >
-            <i className="gg-linkedin"></i>
+            <i className="gg-linkedin"> <img className='icon' src= {linkedIn} alt=''/> </i>
           </a>
           <a href="https://github.com/3omeed" target="_blank" rel="noreferrer">
-            <i className="gg-github"></i>
+            <i className="gg-github"><img className='icon' src= {github} alt=''/></i>
           </a>
           <a
             href="mailto:abdelrahmanemad2712@gmail.com"
             target="_blank"
             rel="noreferrer"
           >
-            <i className="gg-mail"></i>
+            <i className="gg-mail"><img className='icon' src= {mail} alt=''/></i>
           </a>
         </div>
 

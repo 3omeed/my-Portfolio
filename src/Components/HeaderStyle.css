@@ -23,6 +23,11 @@
   border-color: white;
 }
 
+.icon {
+  width: 22px;
+  height: 100%;
+}
+
 @font-face {
   font-family: 'poppins';
   src: url('../assets/font/Poppins-Regular.ttf');
@@ -89,6 +94,9 @@ header {
 .info p {
   font-size: 1.4rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* *::selection,
@@ -158,8 +166,10 @@ header a:hover {
 
 .icons {
   display: flex;
+  width: fit-content;
   align-items: center;
-  margin: 20px 25px;
+  margin: 10px 15px;
+  /* background-color: var(--main-color); */
 }
 header .icons a {
   width: fit-content;
@@ -167,7 +177,7 @@ header .icons a {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 .icons i {
   /* color: black; */
