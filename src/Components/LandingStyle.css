@@ -66,11 +66,10 @@
   width: 50%;
 }
 
-*::selection,
-.Text .title::selection,
-Text.job::selection {
+*::selection {
   /* color: transparent; */
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+  background-color: var(--select-color);
 }
 
 .Text .title {

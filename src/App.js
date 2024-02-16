@@ -16,9 +16,12 @@ function App() {
     if (!isNightMode) {
       document.documentElement.style.setProperty('--border-color', '#d6d5d2');
       document.documentElement.style.setProperty('--main-color', '#d6d5d2');
+      document.documentElement.style.setProperty('--select-color', '#d6d5d2');
     } else {
       document.documentElement.style.setProperty('--border-color', 'black');
       document.documentElement.style.setProperty('--main-color', 'black');
+      document.documentElement.style.setProperty('--select-color', 'white');
+
     }
   };
   return (

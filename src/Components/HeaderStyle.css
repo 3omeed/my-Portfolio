@@ -4,6 +4,7 @@
 :root {
   --main-color: #d6d5d2;
   --border-color: black;
+  --select-color: white;
   --main-margin: 35px;
   --main-padding: 60px 30px;
 }
