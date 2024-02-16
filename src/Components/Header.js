@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './HeaderStyle.css';
 import logo from '../assets/work-photos/design_name_Abdelrahman_Emad.jpg';
 import code from "../assets/work-photos/code.png";
 import linkedIn from "../assets/work-photos/linkedin.png";
-import linkedInDark from "../assets/work-photos/linkedin-dark-wersion.png";
 import github from "../assets/work-photos/github.png";
 import mail from "../assets/work-photos/mail.png";
-import mailDark from "../assets/work-photos/emailDark.png";
 
 function Header(isNightMode) {
   return (

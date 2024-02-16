@@ -5,9 +5,7 @@ import Landing from './Components/Landing';
 import Work from './Components/Work';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-// import NightModeToggle from './Components/nigthModeToggle/NightModeToggle';
 import { useState } from 'react';
-// import '@fortawesome/fontawesome-free/css/all.css';
 
 function App() {
   const [isNightMode, setIsNightMode] = useState(false);
@@ -25,11 +23,7 @@ function App() {
   };
   return (
     <div className={`App ${isNightMode ? 'night-mode' : ''}`}>
-      {/* <NightModeToggle
-        isNightMode={isNightMode}
-        setIsNightMode={setIsNightMode}
-      /> */}
-      <div className='nighty-holder'>
+      <div className="nighty-holder">
         <button
           onClick={toggleNightMode}
           className={`btn nighty ${isNightMode ? 'night-mode' : ''}`}

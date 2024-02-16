@@ -1,48 +1,48 @@
 import   './LandingStyle.css';
 import photo from '../assets/work-photos/IMG_02.jpg';
-import { useEffect, useState } from 'react';
-import { Motion, spring } from 'react-motion';
+// import { useEffect, useState } from 'react';
+// import { Motion, spring } from 'react-motion';
 
 function Landing(isNightMode) {
 
-  const [scrollPos, setScrollPos] = useState(0);
-  const [animate, setAnimate] = useState(false);
+  // const [scrollPos, setScrollPos] = useState(0);
+  // const [animate, setAnimate] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPos(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPos(window.scrollY);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // });
 
-  useEffect(() => {
-    if (scrollPos > 500) {
-      setAnimate(true);
-    } else {
-      setAnimate(false);
-    }
-  }, [scrollPos]);
+  // useEffect(() => {
+  //   if (scrollPos > 500) {
+  //     setAnimate(true);
+  //   } else {
+  //     setAnimate(false);
+  //   }
+  // }, [scrollPos]);
   return (
     <div className="landing box-section" id="Landing">
       <div className="container-landing">
-        <Motion
+        {/* <Motion
           defaultStyle={{ x: -200 }}
           style={{
             x: spring(animate ? 1 : 0, {stiffness: 100, damping: 10}),
             
           }}
-        >
-          {(interpolatingStyle) => (
+        > */}
+          {/* {(interpolatingStyle) => ( */}
             <div
               className="Text"
-              style={{
-                transform: `translateX(${interpolatingStyle.x}px)`,
-                transitionDuration: 1,
-                transitionDelay: 0.5,
-              }}
+              // style={{
+              //   transform: `translateX(${interpolatingStyle.x}px)`,
+              //   transitionDuration: 1,
+              //   transitionDelay: 0.5,
+              // }}
             >
               <p className="name">I'm Abdelrahman Emad</p>
               <p className="job">Front-end developer</p>
@@ -52,8 +52,8 @@ function Landing(isNightMode) {
                 challenges to continually refine and expand my skills.
               </p>
             </div>
-          )}
-        </Motion>
+          {/* )} */}
+        {/* </Motion> */}
         <a href="#Work" className={`my-Work-btn btn`}>
           My Work
         </a>
