@@ -93,8 +93,9 @@
   cursor: pointer;
   box-shadow: var(--border-color) 5px 5px 1px 1px;
   overflow: hidden;
+  transition: all 0.3s linear;
 }
-.btn::before {
+/* .btn::before {
   content: '';
   background-color: #d6d5d2;
   border: 1px solid var(--border-color);
@@ -104,10 +105,13 @@
   left: -60px;
   top: -50px;
   transform: rotate(45deg);
-  transition: all 0.6s linear;
-}
+  transition: all 0.6s ease;
+} */
 .btn:hover::before {
   left: 115%;
+}
+.btn:hover {
+  box-shadow: var(--border-color) -5px -5px 1px 1px;
 }
 
 .photo-handler {
