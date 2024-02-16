@@ -1,13 +1,11 @@
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/code-slash.css');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/mail.css');
+/* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/code-slash.css'); */
+/* @import url('https://unpkg.com/css.gg@2.0.0/icons/css/mail.css'); */
 
 :root {
   --main-color: #d6d5d2;
   --border-color: black;
-  --main-margin: 50px;
-  --main-padding: 80px 40px;
+  --main-margin: 35px;
+  --main-padding: 60px 30px;
 }
 .App {
   background-color: #d6d5d2;
@@ -93,10 +91,10 @@ header {
   font-weight: 500;
 }
 
-.info p::selection,
-.info p i::selection {
-  /* color: var(--main-color); */
-}
+/* *::selection,
+ p i::selection {
+  background-color: var(--main-color);
+} */
 
 .info p i {
   display: inline-block;
@@ -153,6 +151,7 @@ header a {
 
 header a:hover {
   color: white;
+  /* border: 1px solid var(--main-color); */
   transform: rotate(10deg);
   transform: scale(1.09);
 }

@@ -5,8 +5,9 @@ import Landing from './Components/Landing';
 import Work from './Components/Work';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-import NightModeToggle from './Components/nigthModeToggle/NightModeToggle';
+// import NightModeToggle from './Components/nigthModeToggle/NightModeToggle';
 import { useState } from 'react';
+// import '@fortawesome/fontawesome-free/css/all.css';
 
 function App() {
   const [isNightMode, setIsNightMode] = useState(false);
@@ -15,11 +16,11 @@ function App() {
     setIsNightMode(!isNightMode);
     console.log(isNightMode);
     if (!isNightMode) {
-      document.documentElement.style.setProperty('--border-color', 'white');
-      document.documentElement.style.setProperty('--main-color', 'white');
+      document.documentElement.style.setProperty('--border-color', '#d6d5d2');
+      document.documentElement.style.setProperty('--main-color', '#d6d5d2');
     } else {
-      document.documentElement.style.setProperty('--border-color', "black")
-      document.documentElement.style.setProperty('--main-color', "black")
+      document.documentElement.style.setProperty('--border-color', 'black');
+      document.documentElement.style.setProperty('--main-color', 'black');
     }
   };
   return (
@@ -28,10 +29,10 @@ function App() {
         isNightMode={isNightMode}
         setIsNightMode={setIsNightMode}
       /> */}
-      <div>
+      <div className='nighty-holder'>
         <button
           onClick={toggleNightMode}
-          className={`btn ${isNightMode ? 'night-mode' : ''}`}
+          className={`btn nighty ${isNightMode ? 'night-mode' : ''}`}
         >
           {isNightMode ? 'Day Mode' : 'Night Mode'}
         </button>

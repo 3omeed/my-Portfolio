@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.nighty {
+  margin-top: 15px;
+  position: relative;
+}
+.nighty-holder {
+  position: relative;
+}
+
+.nighty-holder::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 25px;
+  background-color: var(--border-color);
+  top: -10px;
+  left: 30%;
+}
+
+.nighty-holder::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 25px;
+  background-color: var(--border-color);
+  top: -10px;
+  left: 70%;
+}
