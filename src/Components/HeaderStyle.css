@@ -10,6 +10,7 @@
 .App {
   background-color: #d6d5d2;
   /* color: black; */
+  transition: all 0.4s ease-in-out;
 }
 .App.night-mode {
   background-color: black;
