@@ -92,7 +92,7 @@ Text.job::selection {
   border: var(--border-color) solid 3px;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: black 5px 5px 1px 1px;
+  box-shadow: var(--border-color) 5px 5px 1px 1px;
   overflow: hidden;
 }
 .btn::before {
@@ -138,7 +138,7 @@ Text.job::selection {
 }
 
 .more-btn a:hover span {
-  background-color: black;
+  background-color: var(--border-color);
 }
 
 @media screen and (max-width: 768px) {

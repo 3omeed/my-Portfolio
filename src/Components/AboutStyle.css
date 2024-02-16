@@ -157,7 +157,7 @@ i.fa-react {
   }
   .boldy {
     font-weight: 800;
-    display: block;
+    /* display: block; */
     font-size: 1.5rem;
     padding: 0 0 15px;
   }

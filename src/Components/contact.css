@@ -37,9 +37,9 @@
   padding: 5px;
   border: 2px solid;
   position: relative;
-  animation: together alternate infinite;
   box-shadow: var(--border-color) 5px 5px 1px 1px;
   overflow: hidden;
+  text-align: center;
 }
 
 #together::before {
@@ -94,6 +94,7 @@ form textarea {
 }
 form .btn {
   color: var(--border-color);
+  align-self: center;
 
 }
 
