@@ -69,7 +69,7 @@
 *::selection,
 .Text .title::selection,
 Text.job::selection {
-  color: transparent;
+  /* color: transparent; */
   background-color: var(--main-color);
 }
 

@@ -161,7 +161,7 @@ header a {
 }
 
 .nav a::selection {
-  color: var(--main-color);
+  /* color: var(--main-color); */
 }
 
 header a:hover {
