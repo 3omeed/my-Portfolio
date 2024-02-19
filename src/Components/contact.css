@@ -40,9 +40,14 @@
   box-shadow: var(--border-color) 5px 5px 1px 1px;
   overflow: hidden;
   text-align: center;
+  transition: all 0.2s linear;
 }
 
-#together::before {
+#together:hover {
+  box-shadow: var(--border-color) 0px 0px 1px 1px;
+}
+
+/* #together::before {
   content: '';
   background-color: #d6d5d2;
   border: 1px solid;
@@ -53,11 +58,11 @@
   top: -50px;
   transform: rotate(45deg);
   transition: all 0.6s linear;
-}
+} */
 
-#together:hover::before {
+/* #together:hover::before {
   left: 115%;
-}
+} */
 
 .contact-form {
   width: 100%;
@@ -95,7 +100,6 @@ form textarea {
 form .btn {
   color: var(--border-color);
   align-self: center;
-
 }
 
 @media screen and (max-width: 768px) {

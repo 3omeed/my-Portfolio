@@ -93,7 +93,7 @@
   cursor: pointer;
   box-shadow: var(--border-color) 5px 5px 1px 1px;
   overflow: hidden;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 /* .btn::before {
   content: '';
@@ -111,7 +111,7 @@
   left: 115%;
 }
 .btn:hover {
-  box-shadow: var(--border-color) -5px -5px 1px 1px;
+  box-shadow: var(--border-color) 0px 0px 1px 1px;
 }
 
 .photo-handler {
