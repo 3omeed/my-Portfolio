@@ -39,16 +39,16 @@ function About() {
                 Tech Stack |{' '}
                 <span className="tech-icons">
                   {' '}
-                  <i class="fa-brands fa-html5">
+                  <i className="fa-brands fa-html5">
                     <img src={HTML} alt=''className='icon'/>
                   </i>
-                  <i class="fa-brands fa-css3-alt">
+                  <i className="fa-brands fa-css3-alt">
                     <img src={Css} alt=''className='icon'/>
                   </i>
-                  <i class="fa-brands fa-js">
+                  <i className="fa-brands fa-js">
                     <img src={JAVASCRIPT} alt=''className='icon'/>
                   </i>
-                  <i class="fa-brands fa-react">
+                  <i className="fa-brands fa-react">
                     <img src={REACT} alt=''className='icon'/>
                   </i>
                 </span>

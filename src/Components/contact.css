@@ -145,3 +145,8 @@ form .btn {
     border: solid 3px var(--border-color);
   }
 }
+.loader {
+  width: 50px;
+  color: var(--border-color);
+  border: var(--border-color) solid 5px;
+}
