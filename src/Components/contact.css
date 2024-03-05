@@ -76,7 +76,7 @@ form {
   flex-direction: column;
   padding: 20px;
   border: solid 3px var(--border-color);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 form label {
   font-size: 1.2rem;
@@ -85,18 +85,33 @@ form input {
   padding: 10px;
   margin: 10px 0;
   background-color: transparent;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: solid 3px var(--border-color);
+  position: relative;
 }
+
+
+
 form textarea {
   padding: 10px;
   margin: 10px 0;
   min-height: 50px;
   overflow-y: hidden;
   background-color: transparent;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: solid 3px var(--border-color);
 }
+
+form textarea::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 102px;
+  height: 10px;
+  background-color: blue;
+}
+
 form .btn {
   color: var(--border-color);
   align-self: center;
@@ -129,12 +144,15 @@ form .btn {
     font-size: 1.2rem;
   }
   form input {
+    position: relative;
     padding: 10px;
     margin: 10px 0;
     background-color: transparent;
     border-radius: 10px;
     border: solid 3px var(--border-color);
   }
+
+ 
   form textarea {
     padding: 10px;
     margin: 10px 0;

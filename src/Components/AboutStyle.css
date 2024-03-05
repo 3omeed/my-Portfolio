@@ -39,13 +39,20 @@
   align-items: center;
   justify-content: center;
 }
-
 .stack .icon {
   width: 35px;
 }
 #About i {
   margin: 1px 25px;
   font-size: 2.3rem;
+}
+
+
+.tech-icons i img {
+transition: all 0.2s linear;
+}
+.tech-icons i img:hover {
+  transform: translateY(-10px);
 }
 
 i.fa-html5 {

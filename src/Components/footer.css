@@ -1,28 +1,29 @@
 .footer {
   width: 100%;
-  /* padding: 10px; */
+  padding: 10px;
   border-top: 5px solid var(--border-color);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   /* background-color: #c6c5c2; */
   font-size: 1rem;
   font-weight: 900;
-  
 }
 
 .personal-data {
   width: 70%;
+  padding: 20px 0;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 }
 .personal-data > div {
   margin: 0;
   /* border: 4px solid; */
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,6 +66,15 @@ h4 {
       font-size: 0.8rem;
     }
   }
+}
+
+.footer .icons a {
+  margin: 10px;
+  transition: all 0.2s linear;
+}
+
+.footer .icons a:hover {
+  transform: translateY(-10px);
 }
 
 .phone {
