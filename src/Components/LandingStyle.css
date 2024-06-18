@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin-right: 0;
+  color: var(--saturated-color);
 }
 
 .landing,
@@ -13,8 +14,13 @@
   border: 5px solid var(--border-color);
   align-items: center;
   justify-content: center;
-  /* flex-direction: row; */
   overflow: hidden;
+  /* background-color: transparent; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: all 0.4s linear;
+}
+.box-section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .overlay {
@@ -92,7 +98,7 @@
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: var(--border-color) 5px 5px 1px 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.2s linear;
 }
 /* .btn::before {
@@ -108,7 +114,7 @@
   transition: all 0.6s ease;
 } */
 .btn:hover::before {
-  left: 115%;
+  /* left: 115%; */
 }
 .btn:hover {
   box-shadow: var(--border-color) 0px 0px 1px 1px;

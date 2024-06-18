@@ -102,13 +102,14 @@ function Work() {
               return (
                 <div className="project-handler" key={index}>
                   <a
+                  draggable={false}
                     target="blank"
                     className="project"
                     rel="stylesheet"
                     href={project.link}
                     alt={'project-link'}
                   >
-                    <img src={project.photo} alt="project" />
+                    <img src={project.photo} alt="project" draggable={false}/>
                     <div className="overlay-project">
                       <p className="date">{project.date}</p>
                       <p className="p-name">{project.name}</p>

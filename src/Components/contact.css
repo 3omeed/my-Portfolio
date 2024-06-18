@@ -90,8 +90,6 @@ form input {
   position: relative;
 }
 
-
-
 form textarea {
   padding: 10px;
   margin: 10px 0;
@@ -103,7 +101,7 @@ form textarea {
 }
 
 form textarea::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -113,7 +111,7 @@ form textarea::before {
 }
 
 form .btn {
-  color: var(--border-color);
+  color: var(--saturated-color);
   align-self: center;
 }
 
@@ -152,7 +150,6 @@ form .btn {
     border: solid 3px var(--border-color);
   }
 
- 
   form textarea {
     padding: 10px;
     margin: 10px 0;

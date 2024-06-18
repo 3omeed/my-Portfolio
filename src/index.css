@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -17,24 +18,27 @@ code {
 }
 .nighty-holder {
   position: relative;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.nighty-holder::before {
+.nighty-holder button::before {
   content: '';
   position: absolute;
   width: 5px;
   height: 25px;
   background-color: var(--border-color);
-  top: -10px;
+  top: -25px;
   left: 30%;
 }
 
-.nighty-holder::after {
+.nighty-holder button::after {
   content: '';
   position: absolute;
   width: 5px;
   height: 25px;
   background-color: var(--border-color);
-  top: -10px;
+  top: -25px;
   left: 70%;
 }
