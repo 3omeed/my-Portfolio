@@ -1,5 +1,6 @@
 import   './LandingStyle.css';
-import photo from '../assets/work-photos/IMG_02.jpg';
+// import photo from '../assets/work-photos/IMG_02.jpg';
+import photo from '../assets/work-photos/Profile_Photo_NEW.jpg';
 // import { useEffect, useState } from 'react';
 // import { Motion, spring } from 'react-motion';
 
