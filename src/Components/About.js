@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutStyle.css';
-import cv from '../assets/abdelrahman emad cv.pdf';
+import cv from '../assets/Abdelrahman Emad_CV 2024.pdf';
 import flag from '../assets/work-photos/egypt-flag.svg';
 import HTML from '../assets/work-photos/html-5 (1).png';
 import Css from '../assets/work-photos/css-3.png';
