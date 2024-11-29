@@ -10,7 +10,7 @@ import Leon from '../assets/work-photos/Leon-Template.jpeg';
 import web from '../assets/work-photos/technical-doc.jpeg';
 import FCCPortfolio from '../assets/work-photos/portfolio.jpeg';
 import TodoList from '../assets/work-photos/todo-list.jpeg';
-import TicTacToe from '../assets/work-photos/tictactoe.png';
+import BlueShell from '../assets/work-photos/tictactoe.png';
 
 function Work() {
   const work = [
@@ -50,10 +50,10 @@ function Work() {
       position: 4,
     },
     {
-      name: 'tic-tac-toe',
-      date: 'June 2022',
-      link: 'https://vocal-blini-c2539a.netlify.app/',
-      photo: TicTacToe,
+      name: 'BlueShell | Premuim Gym Equipment',
+      date: 'October 2024',
+      link: 'https://gym-equipment-client.vercel.app/',
+      photo: BlueShell,
       position: 5,
     },
   ];
