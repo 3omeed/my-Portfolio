@@ -34,11 +34,14 @@ function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          console.log('email sent succsessfully');
           setLoading(false);
           setDone(true);
+
           setTimeout(() => {
             setDone(false);
           }, 2000);
+          
         },
         (error) => {
           console.error(error.text);
