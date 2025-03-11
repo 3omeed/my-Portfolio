@@ -25,24 +25,26 @@ function About() {
     document.body.removeChild(aTag);
   };
   return (
-    <div id="About" >
-      <div className="box" >
+    <div id="About">
+      <div className="box">
         <div className="container">
-          <div className="Heading">About Me</div>
+          <h1 className="Heading">About Me</h1>
           <div className="About-me-content">
             <div className="section" data-aos="fade-left">
-              <p>
-                <span className="boldy" >
+              <div>
+                <h2 className="boldy">
                   Hello! My name is Abdelrahman From Egypt
                   <img className="flag" src={flag} alt="Egypt" />
-                </span>
-                At 23, I'm a dedicated React developer with a fervor for
-                crafting creative and beautiful web pages. Eager to learn and
-                evolve, I thrive on turning ideas into captivating digital
-                experiences. I have learned HTML, CSS, JavaScript and react.js
-                and build alot of projects with them, hope yours is next
-              </p>
-              <div className="stack" >
+                </h2>
+                <p>
+                  At 23, I'm a dedicated React developer with a fervor for
+                  crafting creative and beautiful web pages. Eager to learn and
+                  evolve, I thrive on turning ideas into captivating digital
+                  experiences. I have learned HTML, CSS, JavaScript and react.js
+                  and build alot of projects with them, hope yours is next
+                </p>
+              </div>
+              <div className="stack">
                 Tech Stack |{' '}
                 <span className="tech-icons">
                   {' '}
@@ -62,7 +64,11 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="cv-btn btn" onClick={() => saveFileHandler(cv)} data-aos="fade-up">
+          <div
+            className="cv-btn btn"
+            onClick={() => saveFileHandler(cv)}
+            data-aos="fade-up"
+          >
             Download CV
           </div>
         </div>

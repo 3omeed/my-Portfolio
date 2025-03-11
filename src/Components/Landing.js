@@ -15,8 +15,8 @@ function Landing(isNightMode) {
       <div className="container-landing">
         <div
           className="Text" data-aos="fade-right">
-          <p className="name">I'm Abdelrahman Emad</p>
-          <p className="job">Front-end developer</p>
+          <h1 className="name">I'm Abdelrahman Emad</h1>
+          <h2 className="job">Front-end developer</h2>
           <p className="title">
             Passionate front-end developer with a relentless pursuit of
             knowledge. Eager to create seamless user experiences, I embrace

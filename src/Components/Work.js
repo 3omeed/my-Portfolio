@@ -98,7 +98,7 @@ function Work() {
   };
   return (
     <div className="work " id="Work">
-      <h2 className="Heading">My Work</h2>
+      <h1 className="Heading">My Work</h1>
       <div className="work-container">
         <div className="work-pallete">
           <Slider {...settings}>

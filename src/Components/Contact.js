@@ -57,10 +57,10 @@ function Contact() {
   };
   return (
     <div id="Contact" className="contact box-section">
-      <h2 className="Heading" data-aos="fade-down">
+      <h1 className="Heading" data-aos="fade-down">
         {' '}
         Contact Me
-      </h2>
+      </h1>
       <p className="quote" data-aos="fade-down">
         Ready To Transform Your Bussiness?
       </p>

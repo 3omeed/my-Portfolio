@@ -195,6 +195,9 @@ i.fa-react {
 }
 
 @media screen and (max-width: 426px) {
+  #About {
+    width: 85%;
+  }
   #About .About-me-content .section {
     width: 100%;
     padding: 0;

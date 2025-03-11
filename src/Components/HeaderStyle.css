@@ -91,11 +91,37 @@ header {
   }
 }
 @media (max-width: 428px) {
+  .package {
+    width: 100%;
+  }
+  .package .info p i {
+    font-size: 0.6rem;
+    display: none;
+  }
   .container {
       align-items: center;
+      margin: 40px 0;
 
   }
 }
+
+@media (max-width: 375px) {
+  .package .info p{
+    font-size: 1.2rem;
+  }
+  .package .info img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container {
+      align-items: center;
+      margin: 40px 0;
+
+  }
+}
+
+
 
 .nav {
   width: 100%;
