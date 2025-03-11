@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeaderStyle.css';
-import logo from '../assets/work-photos/design_name_Abdelrahman_Emad.jpg';
+import logo from '../assets/design_name_Abdelrahman_Emad.jpg';
 import code from "../assets/work-photos/code.png";
 import linkedIn from "../assets/work-photos/linkedin.png";
 import github from "../assets/work-photos/github.png";

@@ -29,7 +29,7 @@
 
 @media screen and (max-width: 425px) {
   .Heading {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -54,6 +54,9 @@
 #About i {
   margin: 1px 25px;
   font-size: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
 
@@ -192,9 +195,22 @@ i.fa-react {
 }
 
 @media screen and (max-width: 426px) {
+  #About .About-me-content .section {
+    width: 100%;
+    padding: 0;
+  }
+  #About .About-me-content .section p {
+    font-size: 1rem;
+  }
+  #About .About-me-content .section .boldy {
+    font-size: 1.2rem;
+  }
+
   .stack {
-    margin: 20px 10px 20px 0;
+    margin: 15px;
     font-size: 1.1rem;
+    flex-direction: column;
+    font-weight: 800;
   }
   .tech-icons {
     display: flex;
@@ -202,9 +218,13 @@ i.fa-react {
     align-items: center;
     justify-content: center;
     margin: 5px 0;
+    gap: 20px;
+  }
+  .tech-icons .icon {
+    width: 30px;
   }
   #About i {
-    margin: 1px 15px;
+    margin: 1px 0px;
     font-size: 2rem;
   }
   .cv-btn {
