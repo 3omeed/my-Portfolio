@@ -165,3 +165,16 @@ form .btn {
   color: var(--border-color);
   border: var(--border-color) solid 5px;
 }
+
+@media screen and (max-width: 425px) {
+  .contact {
+    width: 85%;
+  }
+
+  .contact form {
+    width: 100%;
+    border: none;
+    gap: 10px;
+  }
+
+}
