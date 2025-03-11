@@ -52,12 +52,12 @@ function App() {
           {isNightMode ? 'Day Mode' : 'Night Mode'}
         </button>
 
-        <button
+        {/* <button
           onClick={toggleStylishMode}
           className={`btn nighty ${isNightMode ? 'night-mode' : ''}`}
         >
           {isNightMode ? 'Normal' : 'stylish?'}
-        </button>
+        </button> */}
       </div>
       <Header isNightMode={isNightMode} />
       <Landing isNightMode={isNightMode} />

@@ -21,9 +21,10 @@
   flex-wrap: nowrap;
 }
 
-
 .work-pallete {
   width: 100%;
+  /* display: flex;
+  align-items: center; */
 }
 .project-handler {
   font-size: 1rem;
@@ -31,6 +32,7 @@
 }
 .work .slick-track {
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
 }
 .work .slick-slide {
@@ -39,6 +41,8 @@
   margin-right: 10px;
   border: solid 5px var(--border-color);
   padding: 4px;
+  /* height: 750px; */
+  overflow-y: hidden;
 }
 
 .work .slick-slide > div {
@@ -80,7 +84,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .slick-prev::before , .slick-next::before {
+  .slick-prev::before,
+  .slick-next::before {
     font-size: 30px;
   }
 }
@@ -134,5 +139,4 @@
 
 .work .overlay-project:hover p {
   transform: scale(1);
-
 }

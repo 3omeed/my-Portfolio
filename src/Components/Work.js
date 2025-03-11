@@ -10,7 +10,7 @@ import Leon from '../assets/work-photos/Leon-Template.jpeg';
 import web from '../assets/work-photos/technical-doc.jpeg';
 import FCCPortfolio from '../assets/work-photos/portfolio.jpeg';
 import TodoList from '../assets/work-photos/todo-list.jpeg';
-import BlueShell from '../assets/work-photos/tictactoe.png';
+import BlueShell from '../assets/work-photos/blueshell.png';
 
 function Work() {
   const work = [
@@ -29,6 +29,13 @@ function Work() {
       position: 1,
     },
     {
+      name: 'BlueShell | Premuim Gym Equipment',
+      date: 'October 2024',
+      link: 'https://gym-equipment-client.vercel.app/',
+      photo: BlueShell,
+      position: 3,
+    },
+    {
       name: 'Kasper Template',
       date: 'December 2022',
       link: 'https://3omeed.github.io/template-two/',
@@ -40,7 +47,7 @@ function Work() {
       date: 'June 2022',
       link: 'https://3omeed.github.io/template-1/',
       photo: Leon,
-      position: 3,
+      position: 5,
     },
     {
       name: 'To-Do-list',
@@ -49,19 +56,16 @@ function Work() {
       photo: TodoList,
       position: 4,
     },
-    {
-      name: 'BlueShell | Premuim Gym Equipment',
-      date: 'October 2024',
-      link: 'https://gym-equipment-client.vercel.app/',
-      photo: BlueShell,
-      position: 5,
-    },
   ];
 
   const settings = {
+    autoplay: true,
     dots: false,
-    infinite: false,
+    infinite: true,
+    // autoplaySpeed: 1,
     speed: 500,
+    cssEase: 'linear',
+    // pauseOnHover: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -102,14 +106,14 @@ function Work() {
               return (
                 <div className="project-handler" key={index}>
                   <a
-                  draggable={false}
+                    draggable={false}
                     target="blank"
                     className="project"
                     rel="stylesheet"
                     href={project.link}
                     alt={'project-link'}
                   >
-                    <img src={project.photo} alt="project" draggable={false}/>
+                    <img src={project.photo} alt="project" draggable={false} />
                     <div className="overlay-project">
                       <p className="date">{project.date}</p>
                       <p className="p-name">{project.name}</p>

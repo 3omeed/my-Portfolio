@@ -3,7 +3,13 @@ import './contact.css';
 import emailjs from 'emailjs-com';
 import SquareLoader from 'react-spinners/ClipLoader';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Contact() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const [formValue, setFormValue] = useState([
     {
       name: '',
@@ -41,7 +47,6 @@ function Contact() {
           setTimeout(() => {
             setDone(false);
           }, 2000);
-          
         },
         (error) => {
           console.error(error.text);
@@ -52,13 +57,18 @@ function Contact() {
   };
   return (
     <div id="Contact" className="contact box-section">
-      <h2 className="Heading"> Contact Me</h2>
-      <p className="quote">Ready To Transform Your Bussiness?</p>
+      <h2 className="Heading" data-aos="fade-down">
+        {' '}
+        Contact Me
+      </h2>
+      <p className="quote" data-aos="fade-down">
+        Ready To Transform Your Bussiness?
+      </p>
       <span id="arrow">&#8595;</span>
       <div id="together" className="bold">
         <a href="mailto:abdelrahmanemad2712@gmail.com">Let's Work together</a>
       </div>
-      <div className="contact-form">
+      <div className="contact-form" data-aos="fade-up">
         <form onSubmit={submitHandler}>
           <label>Name</label>
           <input

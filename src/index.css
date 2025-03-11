@@ -20,7 +20,7 @@ code {
   position: relative;
   width: 25%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .nighty-holder button::before {
