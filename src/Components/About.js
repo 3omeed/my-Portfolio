@@ -32,29 +32,18 @@ function About() {
         <div className="container">
           <h1 className="Heading">About Me</h1>
           <div className="About-me-content">
-            <div className="section">
+            <div className="section" data-aos="fade-left">
               <div>
-                <h2 className="boldy" data-aos="fade-left">
+                <h2 className="boldy">
                   Hello! My name is Abdelrahman From Egypt
                   <img className="flag" src={flag} alt="Egypt" />
                 </h2>
                 <p>
-                  <TypeAnimation
-                    sequence={[
-                      'At 23',
-                      1000,
-                      'a dedicated React developer with a fervor for crafting creative and beautiful web pages',
-                      1000,
-                      'Eager to learn and evolve',
-                      1000,
-                      'I thrive on turning ideas into captivating digital experiences',
-                      1000,
-                      'I have learned HTML, CSS, JavaScript and react.js and build alot of projects with them, hope yours is next',
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                  />
+                  At 23, I'm a dedicated React developer with a fervor for
+                  crafting creative and beautiful web pages. Eager to learn and
+                  evolve, I thrive on turning ideas into captivating digital
+                  experiences. I have learned HTML, CSS, JavaScript and react.js
+                  and build alot of projects with them, hope yours is next
                 </p>
               </div>
               <div className="stack">
