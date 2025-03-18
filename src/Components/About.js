@@ -10,6 +10,8 @@ import REACT from '../assets/work-photos/react.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
+import { TypeAnimation } from 'react-type-animation';
+
 function About() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -30,18 +32,29 @@ function About() {
         <div className="container">
           <h1 className="Heading">About Me</h1>
           <div className="About-me-content">
-            <div className="section" data-aos="fade-left">
+            <div className="section">
               <div>
-                <h2 className="boldy">
+                <h2 className="boldy" data-aos="fade-left">
                   Hello! My name is Abdelrahman From Egypt
                   <img className="flag" src={flag} alt="Egypt" />
                 </h2>
                 <p>
-                  At 23, I'm a dedicated React developer with a fervor for
-                  crafting creative and beautiful web pages. Eager to learn and
-                  evolve, I thrive on turning ideas into captivating digital
-                  experiences. I have learned HTML, CSS, JavaScript and react.js
-                  and build alot of projects with them, hope yours is next
+                  <TypeAnimation
+                    sequence={[
+                      'At 23',
+                      1000,
+                      'a dedicated React developer with a fervor for crafting creative and beautiful web pages',
+                      1000,
+                      'Eager to learn and evolve',
+                      1000,
+                      'I thrive on turning ideas into captivating digital experiences',
+                      1000,
+                      'I have learned HTML, CSS, JavaScript and react.js and build alot of projects with them, hope yours is next',
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
                 </p>
               </div>
               <div className="stack">
