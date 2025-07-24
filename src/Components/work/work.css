@@ -1,0 +1,141 @@
+#Work {
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  border: 5px solid var(--border-color);
+  align-items: center;
+  border-left: none;
+  border-right: none;
+}
+.work-container {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.work-pallete {
+  width: 100%;
+}
+.project-handler {
+  font-size: 1rem;
+  position: relative;
+}
+.work .slick-track {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.work .slick-slide {
+  width: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: solid 5px var(--border-color);
+  padding: 4px;
+  overflow-y: hidden;
+}
+
+.work .slick-slide > div {
+  display: flex;
+}
+
+.work .slick-next,
+.work .slick-prev {
+  border-radius: 0px;
+}
+.work .slick-prev:before,
+.work .slick-next:before {
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0;
+  color: var(--border-color);
+}
+
+.work .slick-prev:before {
+  left: -25px;
+}
+.work .slick-next:before {
+  right: -25px;
+}
+
+@media screen and (max-width: 768px) {
+  .work button {
+    display: none;
+    position: absolute;
+    left: 100px;
+  }
+  .work .slick-prev:before {
+    display: none;
+  }
+  .work .slick-next:before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 30px;
+  }
+}
+
+.work a {
+  transform: scale(1) rotate(0deg);
+  transition: all 0.3s linear;
+}
+.project-handler:hover .work a {
+  transform: scale(1.1) rotate(25deg);
+}
+
+.work img {
+  height: 100%;
+  border-radius: 0;
+  width: 100%;
+  position: relative;
+}
+
+.work .overlay-project {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.7s ease;
+}
+.work .overlay-project:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.work .overlay-project p {
+  transform: scale(0);
+  transition: all 0.3s linear;
+  color: white;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+.p-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0;
+  width: 80%;
+}
+
+.work .overlay-project:hover p {
+  transform: scale(1);
+}

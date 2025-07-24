@@ -1,10 +1,105 @@
 
+/* Import Poppins font */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/font/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
 
-.App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow-x: hidden;
-    width: 100%;
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/font/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/font/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/font/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* CSS Variables for consistent theming */
+:root {
+  --header-height:  80px;
+  --header-height-scrolled: 70px;
+
+  --accent-color: #6366f1;
+  --accent-hover: #4f46e5;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-primary: rgba(255, 255, 255, 0.95);
+  --bg-secondary: #f8fafc;
+  --border-color: rgba(22, 22, 34, 0.8);
+  --select-color: #ffffff;
+  --main-color: #ffffff;
+  --saturated-color: #374151;
+
+
+  --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 25px -4px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  --z-header: 1000;
+  --z-mobile-menu: 1001;
+  --z-overlay: 999;
+}
+
+/* Dark mode variables */
+.App.night-mode,
+.header--night {
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --bg-primary: rgba(15, 23, 42, 0.95);
+  --bg-secondary: #1e293b;
+  --border-color: rgba(197, 197, 221, 0.8);
+  --accent-color: #818cf8;
+  --accent-hover: #6366f1;
+  --select-color: #ffffff;
+  --main-color: #0f172a;
+  --saturated-color: #e2e8f0;
+  --shadow-medium: 0 4px 25px -4px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.btn {
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  background-color: transparent;
+  border: var(--border-color) solid 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--border-color) 5px 5px 1px 1px;
+  transition: all 0.2s linear;
+  color: var(--text-primary);
+}
+
+.btn:hover {
+  box-shadow: var(--border-color) 0px 0px 1px 1px;
 }

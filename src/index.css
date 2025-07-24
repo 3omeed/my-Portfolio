@@ -1,26 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
+* {
+  padding: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, h6, label, span {
+  color: var(--text-primary);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'poppins';
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 70px; /* Updated for new header height */
+    background-color: var(--bg-primary);
+}
+
+
 .nighty {
-  margin-top: 15px;
+  margin-top: 20px;
   position: relative;
 }
+
 .nighty-holder {
   position: relative;
   width: 25%;
   display: flex;
   justify-content: center;
+  margin-bottom: var(--spacing-md);
 }
 
 .nighty-holder button::before {
@@ -41,4 +66,16 @@ code {
   background-color: var(--border-color);
   top: -25px;
   left: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .nighty-holder {
+    width: 100%;
+  }
+  .nighty-holder button::before,
+  .nighty-holder button::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
 }
