@@ -101,6 +101,10 @@ form .btn {
 }
 
 @media screen and (max-width: 768px) {
+  .contact .Heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .quote {
     text-align: center;
   }
@@ -153,7 +157,7 @@ form .btn {
 
 @media screen and (max-width: 425px) {
   .contact {
-    width: 85%;
+    width: 95%;
   }
   .contact .Heading{
     font-size: 1.8rem;

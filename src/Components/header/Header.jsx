@@ -4,7 +4,6 @@ import logo from "../../assets/design_name_Abdelrahman_Emad.jpg";
 import code from "../../assets/work-photos/code.png";
 import { FaBars } from "react-icons/fa";
 
-
 function Header({ isNightMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("landing");
@@ -134,7 +133,12 @@ function Header({ isNightMode }) {
               </button>
             </li>
           ))}
-          <button className="header__hire-button">Hire ME</button>
+          <button
+            className="header__hire-button"
+            onClick={() => scrollToSection("Contact")}
+          >
+            Hire ME
+          </button>
         </ul>
 
         {/* Mobile Menu Button */}

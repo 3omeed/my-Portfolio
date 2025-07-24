@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import './AboutStyle.css';
-import cv from '../../assets/ABDELRAHMAN_EMAD_2025.pdf';
-import flag from '../../assets/work-photos/egypt-flag.svg';
-import HTML from '../../assets/work-photos/html-5 (1).png';
-import Css from '../../assets/work-photos/css-3.png';
-import JAVASCRIPT from '../../assets/work-photos/js.png';
-import REACT from '../../assets/work-photos/react.png';
+import React, { useEffect } from "react";
+import "./AboutStyle.css";
+import cv from "../../assets/ABDELRAHMAN_EMAD_2025.pdf";
+import flag from "../../assets/work-photos/egypt-flag.svg";
+import HTML from "../../assets/work-photos/html-5 (1).png";
+import Css from "../../assets/work-photos/css-3.png";
+import JAVASCRIPT from "../../assets/work-photos/js.png";
+import REACT from "../../assets/work-photos/react.png";
 
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 function About() {
   useEffect(() => {
@@ -18,7 +18,7 @@ function About() {
   });
 
   const saveFileHandler = () => {
-    const aTag = document.createElement('a');
+    const aTag = document.createElement("a");
     const url = process.env.PUBLIC_URL + cv;
     aTag.href = url;
     aTag.download = cv;
@@ -47,7 +47,7 @@ function About() {
                 </p>
               </div>
               <div className="stack">
-                Tech Stack |
+                <p>Tech Stack |</p>
                 <span className="tech-icons">
                   <i className="fa-brands fa-html5">
                     <img src={HTML} alt="" className="icon" />
