@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://abdelrahmanemad.com/sitemap.xml
+
+# Disallow certain directories if any (uncomment if needed)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Allow specific search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional - uncomment if needed)
+# Crawl-delay: 1
