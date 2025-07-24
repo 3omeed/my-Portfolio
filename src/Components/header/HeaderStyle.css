@@ -473,6 +473,33 @@
 }
 
 /* Responsive Design */
+
+
+@media screen and (max-width: 1300px) {
+  .header__container {
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-lg);
+  }
+  
+  .header__logo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .header__nav--desktop {
+    gap: clamp(var(--spacing-md), 1rem, var(--spacing-lg));
+    transform: scale(0.93);
+  }
+  
+  .header__hire-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 1rem;
+  }
+  
+}
+
+
+
 @media (max-width: 1024px) {
   .header__container {
     padding: 0 var(--spacing-lg);
