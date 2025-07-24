@@ -181,6 +181,9 @@
 }
 
 @media screen and (max-width: 576px) {
+  .Text {
+    align-items: center;
+  }
   .Text .name {
     font-size: 1.2rem;
   }
