@@ -30,52 +30,29 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     width: 100%;
+    /* background-image: var(--background-image);
+    background-size: cover;
+    background-attachment: fixed; */
     padding-top: 70px; /* Updated for new header height */
     background-color: var(--bg-primary);
 }
 
 
-.nighty {
-  margin-top: 20px;
-  position: relative;
-}
-
-.nighty-holder {
-  position: relative;
-  width: 25%;
+.box-section {
+  height: auto;
+  width: 75%;
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
   display: flex;
+  border: 5px solid var(--border-color);
+  /* border-radius: var(--border-radius); */
+  align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  transition: all 0.4s linear;
+  position: relative;
+  background-color: var(--bg-secondary);
 }
-
-.nighty-holder button::before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 25px;
-  background-color: var(--border-color);
-  top: -25px;
-  left: 30%;
-}
-
-.nighty-holder button::after {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 25px;
-  background-color: var(--border-color);
-  top: -25px;
-  left: 70%;
-}
-
-@media screen and (max-width: 768px) {
-  .nighty-holder {
-    width: 100%;
-  }
-  .nighty-holder button::before,
-  .nighty-holder button::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
+.box-section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }

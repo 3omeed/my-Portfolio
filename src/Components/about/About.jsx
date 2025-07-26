@@ -28,11 +28,11 @@ function About() {
   };
   return (
     <div id="About">
-      <div className="box">
+      <div className="box box-section">
         <div className="container">
           <h1 className="Heading">About Me</h1>
           <div className="About-me-content">
-            <div className="section" data-aos="fade-left">
+            <div className="section " data-aos="fade-left">
               <div>
                 <h2 className="boldy">
                   Hello! My name is Abdelrahman From Egypt

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+
 import "./HeaderStyle.css";
+import NightModeToggle from "../../Components/nigthModeToggle/NightModeToggle";
+
 import logo from "../../assets/design_name_Abdelrahman_Emad.jpg";
 import code from "../../assets/work-photos/code.png";
 import { FaBars } from "react-icons/fa";
 
-function Header({ isNightMode }) {
+function Header({ isNightMode, toggleNightMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("landing");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -140,6 +143,10 @@ function Header({ isNightMode }) {
             Hire ME
           </button>
         </ul>
+          <NightModeToggle
+            isNightMode={isNightMode}
+            onToggle={toggleNightMode}
+          />
 
         {/* Mobile Menu Button */}
         <button
@@ -163,6 +170,13 @@ function Header({ isNightMode }) {
           }`}
           aria-hidden={!isMobileMenuOpen}
         >
+          {/* Night Mode Toggle in Mobile Menu */}
+          <NightModeToggle
+            isNightMode={isNightMode}
+            onToggle={toggleNightMode}
+            isMobile={true}
+          />
+
           <ul className="header__nav header__nav--mobile">
             {[
               { id: "Landing", label: "Home" },

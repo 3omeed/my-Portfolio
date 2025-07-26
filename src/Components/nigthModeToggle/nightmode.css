@@ -1,0 +1,222 @@
+/* Modern Night Mode Toggle */
+.nighty-holder {
+  /* position: fixed; */
+  /* top: var(--spacing-lg); */
+  /* right: var(--spacing-lg); */
+  /* z-index: calc(var(--z-header) + 1); */
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.nighty {
+  position: relative;
+  width: 60px;
+  height: 32px;
+  background: var(--bg-secondary);
+  border: 2px solid rgba(226, 232, 240, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+  outline: none;
+  overflow: hidden;
+}
+
+.App.night-mode .nighty {
+  background: var(--bg-secondary);
+  border: 2px solid rgba(51, 65, 85, 0.3);
+}
+
+.nighty:hover {
+  box-shadow: var(--shadow-medium);
+  transform: scale(1.05);
+}
+
+.nighty:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Toggle Switch Circle */
+.nighty::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border-radius: 50%;
+  transition: all var(--transition-medium);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.nighty.night-mode::before {
+  left: 30px;
+  background: linear-gradient(135deg, #E2E8F0, #CBD5E1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Sun/Moon Icons */
+.nighty::after {
+  content: '☀️';
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  transition: all var(--transition-medium);
+  opacity: 1;
+  z-index: 1;
+}
+
+.nighty.night-mode::after {
+  content: '🌙';
+  left: 38px;
+  opacity: 1;
+}
+
+/* Background gradient effect */
+.nighty-holder::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  left: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, var(--accent-color), var(--accent-hover));
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: -1;
+}
+
+
+/* Hide text for modern toggle */
+.nighty-text {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .nighty-holder {
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+  
+  .nighty {
+    width: 58px;
+    height: 30px;
+  }
+  
+  .nighty::before {
+    width: 22px;
+    height: 22px;
+    top: 2px;
+  }
+  
+  .nighty.night-mode::before {
+    left: 30px;
+  }
+  
+  .nighty::after {
+    font-size: 13px;
+    left: 7px;
+  }
+  
+  .nighty.night-mode::after {
+    left: 37px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nighty-holder {
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+  
+  .nighty {
+    width: 55px;
+    height: 28px;
+  }
+  
+  .nighty::before {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+  }
+  
+  .nighty.night-mode::before {
+    left: 29px;
+  }
+  
+  .nighty::after {
+    font-size: 12px;
+    left: 6px;
+  }
+  
+  .nighty.night-mode::after {
+    left: 35px;
+  }
+}
+
+/* Hide desktop toggle on mobile screens and show in menu instead */
+@media screen and (max-width: 968px) {
+  .nighty-holder {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nighty-holder {
+    display: none;
+  }
+    
+}
+/* Mobile menu toggle styles */
+.header__mobile-menu .mobile-night-toggle {
+  padding: var(--spacing-lg) var(--spacing-lg);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--night .header__mobile-menu .mobile-night-toggle {
+  border-bottom: 1px solid rgba(51, 65, 85, 0.2);
+}
+
+.mobile-night-toggle-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.mobile-night-toggle .nighty {
+  width: 50px;
+  height: 26px;
+  position: relative;
+  margin: 0;
+}
+
+.mobile-night-toggle .nighty::before {
+  width: 18px;
+  height: 18px;
+  top: 2px;
+}
+
+.mobile-night-toggle .nighty.night-mode::before {
+  left: 26px;
+}
+
+.mobile-night-toggle .nighty::after {
+  font-size: 11px;
+  left: 5px;
+}
+
+.mobile-night-toggle .nighty.night-mode::after {
+  left: 31px;
+}

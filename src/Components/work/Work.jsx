@@ -5,12 +5,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import kasper from "../../assets/work-photos/kasper-Template.jpeg";
-import Leon from "../../assets/work-photos/Leon-Template.jpeg";
-import web from "../../assets/work-photos/technical-doc.jpeg";
-import FCCPortfolio from "../../assets/work-photos/portfolio.jpeg";
+import kasper from "../../assets/work-photos/kasper-Template.webp";
+import Leon from "../../assets/work-photos/Leon-Template.webp";
+import web from "../../assets/work-photos/technical-doc.webp";
+import FCCPortfolio from "../../assets/work-photos/portfolio.webp";
 import TodoList from "../../assets/work-photos/todo-list.jpeg";
-import BlueShell from "../../assets/work-photos/blueshell.png";
+import BlueShell from "../../assets/work-photos/blueshell.webp";
 
 function Work() {
   const work = [

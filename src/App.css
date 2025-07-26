@@ -64,6 +64,8 @@
   --z-header: 1000;
   --z-mobile-menu: 1001;
   --z-overlay: 999;
+
+  --background-image: url('./assets/images/images.jpg');
 }
 
 /* Dark mode variables */
@@ -80,6 +82,10 @@
   --main-color: #0f172a;
   --saturated-color: #e2e8f0;
   --shadow-medium: 0 4px 25px -4px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
+  --background-image: url('./assets/images/darkmode-bck.jpg');
+
+
 }
 
 
