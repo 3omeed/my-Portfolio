@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./HeaderStyle.css";
 import NightModeToggle from "../../Components/nigthModeToggle/NightModeToggle";
 
-import logo from "../../assets/design_name_Abdelrahman_Emad.jpg";
+import logo from "../../assets/images/logo.webp";
 import code from "../../assets/work-photos/code.png";
 import { FaBars } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ function Header({ isNightMode, toggleNightMode }) {
       setIsScrolled(scrollTop > 50);
 
       // Intersection Observer for active section detection
-      const sections = ["Landing", "About", "Work", "Contact"];
+      const sections = ["Landing", "Services", "Work", "Contact"];
       const sectionElements = sections.map((id) => document.getElementById(id));
 
       const currentSection = sectionElements.find((section) => {
@@ -115,7 +115,7 @@ function Header({ isNightMode, toggleNightMode }) {
         <ul className="header__nav header__nav--desktop">
           {[
             { id: "Landing", label: "Home" },
-            { id: "About", label: "About" },
+            { id: "Services", label: "Services" },
             { id: "Work", label: "Work" },
             { id: "Contact", label: "Contact" },
           ].map(({ id, label }) => (
@@ -180,7 +180,7 @@ function Header({ isNightMode, toggleNightMode }) {
           <ul className="header__nav header__nav--mobile">
             {[
               { id: "Landing", label: "Home" },
-              { id: "About", label: "About" },
+              { id: "Services", label: "Services" },
               { id: "Work", label: "Work" },
               { id: "Contact", label: "Contact" },
             ].map(({ id, label }) => (

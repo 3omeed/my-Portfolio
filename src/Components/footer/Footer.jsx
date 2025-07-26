@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 function Footer({ isNightMode }) {
   return (
     <div className={`footer ${isNightMode ? "footer--night" : ""}`}>
-      <h4 className="bold">its a pleasure !</h4>
+      <h4 className="bold">its a pleasure!</h4>
       <div className="icons">
         <a
           href="https://www.linkedin.com/in/abdelrahman-emad-57bb10237/"

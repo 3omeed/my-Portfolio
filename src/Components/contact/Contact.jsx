@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import './contact.css';
-import emailjs from 'emailjs-com';
-import SquareLoader from 'react-spinners/ClipLoader';
+import React, { useState, useEffect } from "react";
+import "./contact.css";
+import emailjs from "emailjs-com";
+import SquareLoader from "react-spinners/ClipLoader";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Contact() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-  const [formValue, setFormValue] = useState([
-    {
-      name: '',
-      email: '',
-      message: '',
-    },
-  ]);
+  const [formValue, setFormValue] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
   const changeHandler = (e) => {
-    setFormValue({ ...formValue, [e.target]: [e.target.value] });
+    setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
   // console.log(formValue)
@@ -32,15 +30,15 @@ function Contact() {
     console.log(formValue);
     emailjs
       .sendForm(
-        'service_foatw6m',
-        'template_0ahtlcp',
+        "service_foatw6m",
+        "template_0ahtlcp",
         e.target,
-        'KKCQdnBK3nZejLv2p'
+        "KKCQdnBK3nZejLv2p"
       )
       .then(
         (result) => {
           console.log(result.text);
-          console.log('email sent succsessfully');
+          console.log("email sent succsessfully");
           setLoading(false);
           setDone(true);
 
@@ -57,12 +55,11 @@ function Contact() {
   };
   return (
     <div id="Contact" className="contact box-section">
-      <h1 className="Heading" data-aos="fade-down">
-        {' '}
+      <h1 className="Heading gradient-text" data-aos="fade-down">
         Contact Me
       </h1>
       <p className="quote" data-aos="fade-down">
-        Ready To Transform Your Bussiness?
+        Ready To Transform Your Business?
       </p>
       <span id="arrow">&#8595;</span>
       <div id="together" className="bold">
@@ -78,7 +75,7 @@ function Contact() {
             placeholder="your beautiful name"
             type="text"
             required
-            name="from_name"
+            name="name"
           />
           <label>Email</label>
           <input
@@ -88,7 +85,7 @@ function Contact() {
             placeholder="Email Address"
             type="email"
             required
-            name="email_id"
+            name="email"
           />
           <label>Your Message!</label>
           <textarea
@@ -98,14 +95,10 @@ function Contact() {
             placeholder={`let's work together`}
             name="message"
           ></textarea>
-          <button className="btn" type="submit">
-            {done ? 'Sent' : 'Submit!'}
+          <button className="btn-primary btn-small" type="submit" disabled={loading}>
+            {done ? "✓ Sent!" : loading ? "Sending..." : "Submit!"}
           </button>
-          {setLoading ? (
-            <SquareLoader className="loader" loading={loading} />
-          ) : (
-            ''
-          )}
+          {loading && <SquareLoader className="loader" loading={loading} />}
         </form>
       </div>
     </div>

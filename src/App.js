@@ -6,7 +6,6 @@ import Landing from "./Components/landing/Landing";
 import Work from "./Components/work/Work";
 import Contact from "./Components/contact/Contact";
 import Footer from "./Components/footer/Footer";
-import NightModeToggle from "./Components/nigthModeToggle/NightModeToggle";
 
 import "./App.css";
 

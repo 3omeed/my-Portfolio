@@ -37,22 +37,126 @@ body {
     background-color: var(--bg-primary);
 }
 
-
-.box-section {
-  height: auto;
-  width: 75%;
-  padding: var(--spacing-xl);
-  margin-bottom: var(--spacing-2xl);
-  display: flex;
-  border: 5px solid var(--border-color);
-  /* border-radius: var(--border-radius); */
+/* Modern Button Styles */
+.btn-primary {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-light);
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  transition: all 0.4s linear;
-  position: relative;
-  background-color: var(--bg-secondary);
+  min-height: 44px;
+  outline: none;
 }
-.box-section:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
 }
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  outline: none;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Button Sizes */
+.btn-small {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 0.875rem;
+  min-height: 36px;
+}
+
+.btn-large {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: 1.125rem;
+  min-height: 52px;
+}
+
+/* Button Variants */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-outline:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Button States */
+.btn:disabled,.btn-primary:disabled,.btn-secondary:disabled{opacity:.6;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+.btn:disabled:hover,.btn-primary:disabled:hover,.btn-secondary:disabled:hover{transform:none;box-shadow:none}
+
+/* Common Layout Classes */
+.section{min-height:100vh;width:100%;padding:var(--spacing-2xl) 0;display:flex;align-items:center;justify-content:center;position:relative}
+.container{max-width:1280px;width:100%;margin:0 auto;padding:0 var(--spacing-xl)}
+.flex-center{display:flex;align-items:center;justify-content:center}
+.flex-between{display:flex;align-items:center;justify-content:space-between}
+.flex-column{flex-direction:column}
+.text-center{text-align:center}
+
+/* Common Typography */
+.gradient-text{background:linear-gradient(135deg,var(--text-primary) 0%,var(--accent-color) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.title{font-family:'Poppins',sans-serif;font-size:3.5rem;font-weight:700;color:var(--text-primary);margin:0 0 var(--spacing-lg) 0;line-height:1.1;letter-spacing:-.025em}
+.subtitle{font-family:'Poppins',sans-serif;font-size:1.25rem;font-weight:400;color:var(--text-secondary);line-height:1.6;letter-spacing:.025em}
+
+/* Common Card Styles */
+.card{background:var(--bg-secondary);border:1px solid rgba(226,232,240,.3);border-radius:var(--border-radius);transition:all var(--transition-medium);cursor:pointer}
+.App.night-mode .card{background:var(--bg-secondary);border:1px solid rgba(51,65,85,.3)}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow-medium)}
+
+/* Common Gradient Backgrounds */
+.gradient-bg{background:linear-gradient(135deg,var(--bg-primary) 0%,rgba(99,102,241,.05) 100%)}
+.App.night-mode .gradient-bg{background:linear-gradient(135deg,var(--bg-primary) 0%,rgba(129,140,248,.1) 100%)}
+
+/* Common Animations */
+@keyframes slideInFromLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInFromRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(180deg)}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.1);opacity:.1}}
+
+.box-section{height:auto;width:75%;padding:var(--spacing-xl);margin-bottom:var(--spacing-2xl);display:flex;border:5px solid var(--border-color);align-items:center;justify-content:center;overflow:hidden;transition:all .4s linear;position:relative;background-color:var(--bg-secondary)}
+.box-section:hover{box-shadow:0 8px 16px rgba(0,0,0,.4)}
