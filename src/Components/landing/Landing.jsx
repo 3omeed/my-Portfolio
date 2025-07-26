@@ -29,7 +29,7 @@ function Landing(isNightMode) {
             <a href="#Work" className="btn-primary">
               View My Work
             </a>
-            <a href="#contact" className="btn-secondary">
+            <a href="#Contact" className="btn-secondary">
               Get In Touch
             </a>
           </div>
