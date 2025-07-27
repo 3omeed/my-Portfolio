@@ -36,7 +36,19 @@ body {
     padding-top: 70px; /* Updated for new header height */
     background-color: var(--bg-primary);
 }
-
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-lg) 0;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 /* Modern Button Styles */
 .btn-primary {
   padding: var(--spacing-md) var(--spacing-xl);

@@ -6,11 +6,11 @@
   padding: var(--spacing-lg);
   margin-bottom: var(--spacing-2xl);
   display: flex;
-  border: 5px solid var(--border-color);
   align-items: center;
   border-left: none;
   border-right: none;
 }
+
 .work-container {
   width: 100%;
   margin: 10px auto;
@@ -125,17 +125,15 @@
   transition: all 0.3s linear;
   color: white;
 }
-
 .date {
   font-size: 0.8rem;
 }
 .p-name {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 0;
   width: 80%;
 }
-
 .work .overlay-project:hover p {
   transform: scale(1);
 }

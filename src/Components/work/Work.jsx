@@ -1,4 +1,3 @@
-import React from "react";
 import "./work.css";
 
 import Slider from "react-slick";
@@ -99,8 +98,8 @@ function Work() {
     ],
   };
   return (
-    <div className="work " id="Work">
-      <h1 className="Heading">My Work</h1>
+    <div className="work" id="Work">
+      <h1 className="heading">My Work</h1>
       <div className="work-container">
         <div className="work-pallete">
           <Slider {...settings}>

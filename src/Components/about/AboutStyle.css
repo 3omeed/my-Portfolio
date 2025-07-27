@@ -1,19 +1,9 @@
 /* Modern Services Section */
-#About {
+#Services {
   min-height: 100vh;
   width: 100%;
-  padding: var(--spacing-2xl) 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(99, 102, 241, 0.03) 100%);
+  margin-bottom: var(--spacing-xl);
 }
-
-.App.night-mode #About {
-  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(129, 140, 248, 0.08) 100%);
-}
-
 .services-container {
   max-width: 1280px;
   width: 100%;
@@ -27,7 +17,7 @@
   margin-bottom: var(--spacing-2xl);
 }
 
-.services-title {
+.services-title, .heading {
   font-family: 'Poppins', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
@@ -88,10 +78,6 @@
   min-width: 120px;
 }
 
-.App.night-mode .tech-item {
-  background: var(--bg-secondary);
-  border: 1px solid rgba(51, 65, 85, 0.3);
-}
 
 .tech-item:hover {
   transform: translateY(-8px);
@@ -128,7 +114,7 @@
   background: var(--bg-secondary);
   border: 1px solid rgba(226, 232, 240, 0.3);
   border-radius: var(--border-radius);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   transition: all var(--transition-medium);
   cursor: pointer;
   position: relative;
@@ -223,7 +209,6 @@
   }
   
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
   }
 }
@@ -256,7 +241,7 @@
   }
   
   .services-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     gap: var(--spacing-lg);
   }
 }
@@ -310,6 +295,9 @@
 }
 
 @media screen and (max-width: 576px) {
+  #Services {
+    width: 90%;
+  }
   .services-title {
     font-size: 2rem;
   }
@@ -319,9 +307,14 @@
   }
   
   .tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-sm);
   }
-  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
   .service-card {
     padding: var(--spacing-md);
   }
