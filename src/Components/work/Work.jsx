@@ -1,91 +1,124 @@
+import React, { useEffect } from "react";
 import "./work.css";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import AOS, { init } from "aos";
+import "aos/dist/aos.css";
+
 import kasper from "../../assets/work-photos/kasper-Template.webp";
 import Leon from "../../assets/work-photos/Leon-Template.webp";
 import web from "../../assets/work-photos/technical-doc.webp";
 import FCCPortfolio from "../../assets/work-photos/portfolio.webp";
-import TodoList from "../../assets/work-photos/todo-list.jpeg";
+import Meterika from "../../assets/work-photos/meterika-photo.webp";
 import BlueShell from "../../assets/work-photos/blueshell.webp";
 
 function Work() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const work = [
     {
-      name: "portfolio",
-      date: "March 2023",
+      name: "Meterika | MEP Services and heating",
+      date: "Jun 24",
+      link: "https://www.meterika.com/",
+      photo: Meterika,
+      tech: "React, CSS",
+      description:
+        "Portfolio for MEP services and heating company with modern design",
+      featured: true,
+    },
+    {
+      name: "BlueShell | Premium Gym Equipment",
+      date: "Oct 24",
+      link: "https://gym-equipment-client.vercel.app/",
+      photo: BlueShell,
+      tech: "React, Tailwind",
+      description:
+        "Rebuild the front-end of an existing e-commerce platform for gym equipment",
+      featured: true,
+    },
+    {
+      name: "Portfolio Website",
+      date: "Mar 23",
       link: "https://3omeed.github.io/FCC-portfolio/",
       photo: FCCPortfolio,
       tech: "HTML, CSS, JS",
-      position: 0,
+      description:
+        "Clean and responsive portfolio one page website as a template",
     },
     {
-      name: "Documentary",
-      date: "july 2023",
+      name: "Technical Documentation",
+      date: "Jul 23",
       link: "https://3omeed.github.io/technical-documentaion/",
       photo: web,
       tech: "HTML, CSS, JS",
-      position: 1,
-    },
-    {
-      name: "BlueShell | Premuim Gym Equipment",
-      date: "October 2024",
-      link: "https://gym-equipment-client.vercel.app/",
-      photo: BlueShell,
-      tech: "React, tailwind, Node.js, Express, MongoDB",
-      position: 3,
+      description:
+        "Interactive technical documentation page built for practicing",
     },
     {
       name: "Kasper Template",
-      date: "December 2022",
+      date: "Dec 22",
       link: "https://3omeed.github.io/template-two/",
       photo: kasper,
       tech: "HTML, CSS, JS",
-      position: 2,
+      description: "Modern business template design",
     },
     {
-      name: "Leon",
-      date: "June 2022",
+      name: "Leon Template",
+      date: "Jun 22",
       link: "https://3omeed.github.io/template-1/",
       photo: Leon,
       tech: "HTML, CSS, JS",
-      position: 5,
-    },
-    {
-      name: "To-Do-list",
-      date: "June 2022",
-      link: "https://gorgeous-croquembouche-952600.netlify.app/",
-      photo: TodoList,
-      tech: "React, CSS",
-      position: 4,
+      description: "Creative agency landing page template",
     },
   ];
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    cssEase: "linear",
-    // pauseOnHover: true,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
+    pauseOnHover: true,
+    centerMode: true,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          dots: false,
+          arrows: true,
+          dots: true,
+          centerMode: true,
+          centerPadding: "150px",
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: "150px",
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: "50px",
         },
       },
       {
@@ -93,41 +126,72 @@ function Work() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          centerPadding: "0px",
         },
       },
     ],
   };
+
   return (
-    <div className="work" id="Work">
-      <h1 className="heading">My Work</h1>
-      <div className="work-container">
-        <div className="work-pallete">
+    <section className="work gradient-bg" id="Work">
+      <div className="container">
+        <div className="text-center" data-aos="fade-up">
+          <h2 className="title gradient-text">My Work</h2>
+          <p className="subtitle">
+            A showcase of projects I've built with passion.
+          </p>
+        </div>
+
+        <div className="work-slider" data-aos="fade-up" data-aos-delay="200">
           <Slider {...settings}>
-            {work.map((project, index) => {
-              return (
-                <div className="project-handler" key={index}>
-                  <a
-                    draggable={false}
-                    target="blank"
-                    className="project"
-                    rel="stylesheet"
-                    href={project.link}
-                    alt={"project-link"}
-                  >
-                    <img src={project.photo} alt="project" draggable={false} />
-                    <div className="overlay-project">
-                      <p className="date">{project.date}</p>
-                      <p className="p-name">{project.name}</p>
-                      <p className="tech-used">{project.tech}</p>
+            {work.map((project, index) => (
+              <div className="project-slide" key={index}>
+                <div className="project-card card">
+                  <div className="project-image">
+                    <img
+                      src={project.photo}
+                      alt={project.name}
+                      loading="lazy"
+                    />
+                    <div className="project-overlay">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm"
+                        aria-label={`View ${project.name} project`}
+                      >
+                        View Project
+                      </a>
                     </div>
-                  </a>
+                  </div>
+
+                  <div className="project-content">
+                    <div className="project-header">
+                      <h3 className="project-name">{project.name}</h3>
+                      <span className="project-date">{project.date}</span>
+                    </div>
+
+                    <p className="project-description">{project.description}</p>
+
+                    <div className="project-tech">
+                      {project.tech.split(", ").map((tech, techIndex) => (
+                        <span key={techIndex} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

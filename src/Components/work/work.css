@@ -1,139 +1,458 @@
-#Work {
-  justify-content: center;
-  flex-direction: column;
-  height: auto;
-  width: 90%;
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-2xl);
+/* Work Section */
+.work {
+  padding: var(--spacing-2xl) 0;
   display: flex;
-  align-items: center;
-  border-left: none;
-  border-right: none;
+  margin-bottom: var(--spacing-xl);
 }
 
-.work-container {
-  width: 100%;
-  margin: 10px auto;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.work-pallete {
-  width: 100%;
-}
-.project-handler {
-  font-size: 1rem;
-  position: relative;
-}
-.work .slick-track {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.work .slick-slide {
-  width: 20%;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: solid 5px var(--border-color);
-  padding: 4px;
-  overflow-y: hidden;
-}
-
-.work .slick-slide > div {
-  display: flex;
-}
-
-.work .slick-next,
-.work .slick-prev {
-  border-radius: 0px;
-}
-.work .slick-prev:before,
-.work .slick-next:before {
-  font-size: 40px;
-  position: absolute;
-  z-index: 1;
-  border-radius: 0;
-  color: var(--border-color);
-}
-
-.work .slick-prev:before {
-  left: -25px;
-}
-.work .slick-next:before {
-  right: -25px;
-}
-
-@media screen and (max-width: 768px) {
-  .work button {
-    display: none;
-    position: absolute;
-    left: 100px;
-  }
-  .work .slick-prev:before {
-    display: none;
-  }
-  .work .slick-next:before {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .slick-prev::before,
-  .slick-next::before {
-    font-size: 30px;
-  }
-}
-
-.work a {
-  transform: scale(1) rotate(0deg);
-  transition: all 0.3s linear;
-}
-.project-handler:hover .work a {
-  transform: scale(1.1) rotate(25deg);
-}
-
-.work img {
-  height: 100%;
-  border-radius: 0;
-  width: 100%;
-  position: relative;
-}
-
-.work .overlay-project {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.work .text-center {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work .subtitle {
+  max-width: 95%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Slider Container */
+.work-slider {
+  margin-top: var(--spacing-2xl);
+  position: relative;
+  width: 100%;
+}
+
+/* Project Slide Wrapper */
+.project-slide {
+  padding: 0 var(--spacing-xs);
+  outline: none;
+}
+
+/* Project Card - Responsive Base */
+.project-card {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all var(--transition-medium);
+  position: relative;
+  margin: 0 auto;
+  max-width: 350px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-large);
+}
+
+/* Project Image Container */
+.project-image {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.project-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: all var(--transition-medium);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+/* Project Overlay */
+.project-overlay {
   position: absolute;
-  right: 0;
   top: 0;
-  transition: all 0.7s ease;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.9),
+    rgba(139, 92, 246, 0.9)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-medium);
 }
-.work .overlay-project:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+
+.project-overlay a {
+  font-size: 0.9rem;
+  padding: var(--spacing-sm) var(--spacing-md);
 }
-.work .overlay-project p {
-  transform: scale(0);
-  transition: all 0.3s linear;
-  color: white;
+
+.project-card:hover .project-overlay {
+  opacity: 1;
 }
-.date {
+
+/* Project Content */
+.project-content {
+  flex: 1;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Project Header */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.project-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0;
+  flex: 1;
+}
+
+.project-date {
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  background: rgba(99, 102, 241, 0.1);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  white-space: nowrap;
 }
-.p-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0;
-  width: 80%;
+
+/* Project Description */
+.project-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
 }
-.work .overlay-project:hover p {
-  transform: scale(1);
+
+/* Tech Tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+}
+
+.tech-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid rgba(226, 232, 240, 0.3);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/* Slider Dots Customization */
+.slick-dots {
+  bottom: -50px;
+}
+
+.slick-dots li button:before {
+  color: var(--accent-color);
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+/* Slider Arrows */
+.slick-prev, .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+/* Responsive Design - Clean and Organized */
+
+/* Large Desktop (1200px+) */
+@media screen and (max-width: 1200px) {
+  .project-card {
+    height: 480px;
+    max-width: 350px;
+  }
+  
+  .project-image {
+    height: 240px;
+  }
+  
+  .slick-prev {
+    left: -40px;
+  }
+  
+  .slick-next {
+    right: -40px;
+  }
+}
+
+/* Desktop/Laptop (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .work {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .project-card {
+    height: 460px;
+    max-width: 360px;
+  }
+  
+ 
+  
+  .project-content {
+    padding: var(--spacing-md);
+  }
+  
+  .project-name {
+    font-size: 1rem;
+  }
+  
+  .project-description {
+    font-size: 0.8rem;
+  }
+  
+  .slick-prev {
+    left: -30px;
+  }
+  
+  .slick-next {
+    right: -30px;
+  }
+}
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 769px) {
+  .work .subtitle {
+    font-size: clamp(0.9rem, 2vw, 1.25rem);
+    line-height: 1.4;
+  }
+  
+  .work-slider {
+    margin: var(--spacing-xl) 0;
+    padding: 0 var(--spacing-md);
+    overflow: hidden;
+  }
+  
+  .work-slider .slick-list {
+    overflow: visible;
+  }
+  
+  .project-slide {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .project-card {
+    height: 400px;
+    max-width: 350px;
+  }
+  
+  .project-image {
+    /* height: 200px; */
+  }
+  
+  .project-name {
+    font-size: 0.8rem;
+  }
+  
+  .project-description {
+    font-size: 0.7rem;
+  }
+  .project-tech {
+    gap: 4px;
+  }
+  
+  .slick-center .project-card {
+    transition: transform var(--transition-medium);
+  }
+  
+  .slick-dots {
+    bottom: -40px;
+  }
+}
+
+/* Mobile Large (576px and below) */
+@media screen and (max-width: 576px) {
+  .work {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .work .subtitle {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    max-width: 100%;
+  }
+  
+  .work-slider {
+    margin: var(--spacing-lg) -20px 0;
+    padding: 0 20px;
+  }
+  
+  .project-slide {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .project-card {
+    height: 420px;
+    max-width: 300px;
+  }
+  
+  .project-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .project-date {
+    align-self: flex-end;
+  }
+  
+  .project-name {
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+  
+  .project-description {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  
+  .project-overlay a {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+  
+  .slick-dots {
+    bottom: -35px;
+  }
+}
+
+/* Mobile Small (480px and below) */
+@media screen and (max-width: 480px) {
+  .work {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .work .subtitle {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+  }
+  
+  .work-slider {
+    margin: var(--spacing-md) 0;
+    padding: 0 10px;
+  }
+  
+  .project-slide {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .project-card {
+    height: 400px;
+    max-width: 300px;
+  }
+  
+  .project-image {
+    height: 160px;
+  }
+  
+  .project-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .project-name {
+    font-size: 1rem;
+  }
+  
+  .project-description {
+    font-size: 0.8rem;
+  }
+  
+  .project-date {
+    font-size: 0.7rem;
+    padding: 4px var(--spacing-xs);
+  }
+  
+  .project-tech {
+    gap: 4px;
+  }
+  
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+  
+  .project-overlay a {
+    font-size: 0.75rem;
+    padding: var(--spacing-xs);
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li {
+    margin: 0 3px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
 }
