@@ -2,12 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    
+
     <!-- Favicon and Icons -->
-    <!-- <link rel="icon" type="image/webp" href="https://www.abdelrahmanemad.online/assets/logo.webp" /> -->
-    <link rel="icon" type="image/webp" href="https://www.abdelrahmanemad.online/assets/logo.webp" />
-    <link rel="apple-touch-icon" href="https://www.abdelrahmanemad.online/assets/logo.webp" />
-    
+    <!-- Local fallback (React, during dev or build) -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/assets/logo.png" />
+
+    <!-- Production fallback (external link) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.abdelrahmanemad.online/assets/logo.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="https://www.abdelrahmanemad.online/assets/logo.png"
+    />
+
     <!-- Basic Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -15,40 +26,70 @@
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
-    
+
     <!-- Primary Meta Tags -->
-    <title>Abdelrahman Emad | Frontend Developer Portfolio</title>
-    <meta name="title" content="Abdelrahman Emad | Frontend Developer Portfolio" />
-    <meta name="description" content="Abdelrahman Emad | Frontend Developer Portfolio - Showcasing creative, user-friendly web applications built with cutting-edge technologies like React and Next.js. Explore my projects, skills, and journey as a passionate front-end developer." />
-    <meta name="keywords" content="Abdelrahman Emad, Frontend Developer, React Developer, JavaScript, HTML, CSS, Web Development, Portfolio, UI/UX, Next.js, Responsive Design, Modern Web Apps" />
-    
+    <title>Abdelrahman Emad | Front-end Developer Portfolio</title>
+    <meta
+      name="title"
+      content="Abdelrahman Emad | Front-end Developer Portfolio"
+    />
+    <meta
+      name="description"
+      content="Abdelrahman Emad | Front-end Developer Portfolio - Showcasing creative, user-friendly web applications built with cutting-edge technologies like React and Next.js. Explore my projects, skills, and journey as a passionate front-end developer."
+    />
+    <meta
+      name="keywords"
+      content="Abdelrahman Emad, Front-end Developer, React Developer, JavaScript, HTML, CSS, Web Development, Portfolio, UI/UX, Next.js, Responsive Design, Modern Web Apps"
+    />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://abdelrahmanemad.online/" />
-    <meta property="og:title" content="Abdelrahman Emad | Frontend Developer Portfolio" />
-    <meta property="og:description" content="Showcasing creative, user-friendly web applications built with cutting-edge technologies like React and Next.js. Explore my projects, skills, and journey as a passionate front-end developer." />
-    <meta property="og:image" content="https://www.abdelrahmanemad.online/assets/logo.webp" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:title"
+      content="Abdelrahman Emad | Front-end Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Showcasing creative, user-friendly web applications built with cutting-edge technologies like React and Next.js. Explore my projects, skills, and journey as a passionate front-end developer."
+    />
+    <meta
+      property="og:image"
+      content="https://www.abdelrahmanemad.online/assets/logo.png"
+    />
+    <meta property="og:image:width" content="350" />
+    <meta property="og:image:height" content="350" />
     <meta property="og:site_name" content="Abdelrahman Emad Portfolio" />
     <meta property="og:locale" content="en_US" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://abdelrahmanemad.online/" />
-    <meta property="twitter:title" content="Abdelrahman Emad | Frontend Developer Portfolio" />
-    <meta property="twitter:description" content="Showcasing creative, user-friendly web applications built with cutting-edge technologies like React and Next.js. Explore my projects, skills, and journey as a passionate front-end developer." />
-    <meta property="twitter:image" content="https://www.abdelrahmanemad.online/assets/logo.webp" />
+    <meta
+      property="twitter:title"
+      content="Abdelrahman Emad | Frontend Developer Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Showcasing creative, user-friendly web applications built with cutting-edge technologies like React and Next.js. Explore my projects, skills, and journey as a passionate front-end developer."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.abdelrahmanemad.online/assets/logo.png"
+    />
     <meta property="twitter:creator" content="@abdelrahmanemad" />
-    
+
     <!-- LinkedIn -->
     <meta property="linkedin:owner" content="abdelrahman-emad" />
-    
+
     <!-- Additional SEO Meta Tags -->
     <meta name="application-name" content="Abdelrahman Emad Portfolio" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
-    
+    <meta
+      name="msapplication-config"
+      content="%PUBLIC_URL%/browserconfig.xml"
+    />
+
     <!-- Google Analytics 4 (GA4) - Replace GA_MEASUREMENT_ID with your actual ID -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
@@ -57,60 +98,60 @@
       gtag('js', new Date());
       gtag('config', 'GA_MEASUREMENT_ID');
     </script> -->
-    
+
     <!-- Google Tag Manager - Replace GTM-XXXXXXX with your actual GTM ID -->
     <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
-    
+
     <!-- Google Search Console Verification - Replace with your verification code -->
     <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
-    
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://abdelrahmanemad.online/" />
-    
+
     <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Abdelrahman Emad",
-      "jobTitle": "Frontend Developer",
-      "image": "https://www.abdelrahmanemad.online/assets/logo.webp",
-      "logo": "https://www.abdelrahmanemad.online/assets/logo.webp",
-      "description": "Passionate frontend developer specializing in React, JavaScript, and modern web technologies",
-      "url": "https://abdelrahmanemad.online",
-      "sameAs": [
-        "https://github.com/3omeed",
-        "https://www.linkedin.com/in/abdelrahman-emad27"
-      ],
-      "knowsAbout": [
-        "JavaScript",
-        "React",
-        "HTML5",
-        "CSS3",
-        "Frontend Development",
-        "Web Development",
-        "UI/UX Design",
-        "Next.js"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdelrahman Emad",
+        "jobTitle": "Front-end Developer",
+        "image": "https://www.abdelrahmanemad.online/assets/logo.png",
+        "logo": "https://www.abdelrahmanemad.online/assets/logo.png",
+        "description": "Passionate front-end developer specializing in React, JavaScript, and modern web technologies",
+        "url": "https://abdelrahmanemad.online",
+        "sameAs": [
+          "https://github.com/3omeed",
+          "https://www.linkedin.com/in/abdelrahman-emad27"
+        ],
+        "knowsAbout": [
+          "JavaScript",
+          "React",
+          "HTML5",
+          "CSS3",
+          "Frontend Development",
+          "Web Development",
+          "UI/UX Design",
+          "Next.js"
+        ]
+      }
     </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) - Replace GTM-XXXXXXX with your actual GTM ID -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-    
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

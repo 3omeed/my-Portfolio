@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import "./work.css";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import AOS, { init } from "aos";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 import kasper from "../../assets/work-photos/kasper-Template.webp";

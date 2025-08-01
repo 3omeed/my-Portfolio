@@ -104,13 +104,17 @@
 
 /* Services Grid */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-2xl);
 }
 
 .service-card {
+  max-width: 400px;
   background: var(--bg-secondary);
   border: 1px solid rgba(226, 232, 240, 0.3);
   border-radius: var(--border-radius);
@@ -119,11 +123,6 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
-
-.App.night-mode .service-card {
-  background: var(--bg-secondary);
-  border: 1px solid rgba(51, 65, 85, 0.3);
 }
 
 .service-card::before {
@@ -199,17 +198,22 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .services-container {
     padding: 0 var(--spacing-lg);
   }
   
   .services-title {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
-  
+  .services-subtitle {
+    font-size: 1rem;
+  }
   .services-grid {
     gap: var(--spacing-lg);
+  }
+  .service-card {
+    max-width: 400px;
   }
 }
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./HeaderStyle.css";
 import NightModeToggle from "../../Components/nigthModeToggle/NightModeToggle";
 
-import logo from "../../assets/images/logo.webp";
+import logo from "../../assets/images/logo.png";
 import code from "../../assets/work-photos/code.png";
 import { FaBars } from "react-icons/fa";
 
