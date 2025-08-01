@@ -38,7 +38,7 @@
 ### Google Search Console Setup:
 
 1. Go to [Google Search Console](https://search.google.com/search-console/)
-2. Add your property: `https://abdelrahmanemad.com`
+2. Add your property: `https://abdelrahmanemad.online`
 3. Choose verification method:
    - **HTML file**: Download the verification file and replace the template file
    - **Meta tag**: Copy the verification code and uncomment the meta tag in index.html
