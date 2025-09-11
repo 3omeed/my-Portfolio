@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import "./AboutStyle.css";
 import cv from "../../assets/ABDELRAHMAN_EMAD_2025.pdf";
 import HTML from "../../assets/work-photos/html-5 (1).png";
@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 function About() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
-  });
+  }, []);
 
   const saveFileHandler = () => {
     const aTag = document.createElement("a");
@@ -25,7 +25,6 @@ function About() {
   };
 
   const services = [
-    
     {
       icon: "📱",
       title: "Responsive Web Applications",
@@ -97,7 +96,7 @@ function About() {
               key={index}
               className="service-card"
               data-aos="fade-up"
-              data-aos-delay={ index * 10}
+              data-aos-delay={index * 10}
             >
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
@@ -106,7 +105,7 @@ function About() {
           ))}
         </div>
 
-        <div className="services-cta" >
+        <div className="services-cta">
           <button
             className="cv-btn btn-primary"
             onClick={() => saveFileHandler(cv)}

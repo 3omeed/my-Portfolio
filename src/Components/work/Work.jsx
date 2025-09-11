@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import "./work.css";
 
 import Slider from "react-slick";
@@ -13,7 +13,7 @@ import Leon from "../../assets/work-photos/Leon-Template.webp";
 import web from "../../assets/work-photos/technical-doc.webp";
 import FCCPortfolio from "../../assets/work-photos/portfolio.webp";
 import Meterika from "../../assets/work-photos/meterika-photo.webp";
-import BlueShell from "../../assets/work-photos/blueshell.webp";
+import eCommerce from "../../assets/work-photos/e-commerce.png";
 
 function Work() {
   useEffect(() => {
@@ -32,14 +32,15 @@ function Work() {
       featured: true,
     },
     {
-      name: "BlueShell | Premium Gym Equipment",
+      name: "E-commerce Website",
       date: "Oct 24",
-      link: "https://gym-equipment-client.vercel.app/",
-      photo: BlueShell,
-      tech: "React, Tailwind",
+      link: "https://e-commerce-omnifender.vercel.app/",
+      photo: eCommerce,
+      tech: "Nextjs, TypeScript , Modular scss, Sanity",
       description:
-        "Rebuild the front-end of an existing e-commerce platform for gym equipment",
+        "Building a full-featured e-commerce website with product listings, shopping cart, and secure checkout.",
       featured: true,
+      inProgress: true,
     },
     {
       name: "Portfolio Website",
@@ -173,6 +174,7 @@ function Work() {
                     <div className="project-header">
                       <h3 className="project-name">{project.name}</h3>
                       <span className="project-date">{project.date}</span>
+                      <span className="project-status">{project.inProgress ? "In Progress" : "Completed"}</span>
                     </div>
 
                     <p className="project-description">{project.description}</p>

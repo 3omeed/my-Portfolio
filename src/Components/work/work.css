@@ -14,7 +14,7 @@
 
 .work .subtitle {
   max-width: 95%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--text-secondary);
@@ -61,7 +61,6 @@
   height: 260px;
   overflow: hidden;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  
 }
 
 .project-image img {
@@ -70,7 +69,6 @@
   object-fit: cover;
   object-position: top;
   transition: all var(--transition-medium);
-  
 }
 
 .project-card:hover .project-image img {
@@ -125,7 +123,7 @@
 }
 
 .project-name {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -135,7 +133,7 @@
 }
 
 .project-date {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--accent-color);
@@ -144,10 +142,19 @@
   border-radius: var(--border-radius-sm);
   white-space: nowrap;
 }
-
+.project-status {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bg-secondary);
+  background: var(--accent-color);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  white-space: nowrap;
+}
 /* Project Description */
 .project-description {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   color: var(--text-secondary);
@@ -165,7 +172,7 @@
 }
 
 .tech-tag {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-primary);
@@ -199,7 +206,8 @@
 }
 
 /* Slider Arrows */
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   z-index: 10;
   width: 40px;
   height: 40px;
@@ -213,7 +221,8 @@
   right: -50px;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   font-size: 20px;
   color: var(--accent-color);
 }
@@ -226,15 +235,15 @@
     height: 480px;
     max-width: 350px;
   }
-  
+
   .project-image {
     height: 240px;
   }
-  
+
   .slick-prev {
     left: -40px;
   }
-  
+
   .slick-next {
     right: -40px;
   }
@@ -245,30 +254,28 @@
   .work {
     padding: var(--spacing-xl) 0;
   }
-  
+
   .project-card {
     height: 460px;
     max-width: 360px;
   }
-  
- 
-  
+
   .project-content {
     padding: var(--spacing-md);
   }
-  
+
   .project-name {
     font-size: 1rem;
   }
-  
+
   .project-description {
     font-size: 0.8rem;
   }
-  
+
   .slick-prev {
     left: -30px;
   }
-  
+
   .slick-next {
     right: -30px;
   }
@@ -280,45 +287,45 @@
     font-size: clamp(0.9rem, 2vw, 1.25rem);
     line-height: 1.4;
   }
-  
+
   .work-slider {
     margin: var(--spacing-xl) 0;
     padding: 0 var(--spacing-md);
     overflow: hidden;
   }
-  
+
   .work-slider .slick-list {
     overflow: visible;
   }
-  
+
   .project-slide {
     padding: 0 var(--spacing-xs);
   }
-  
+
   .project-card {
     height: 400px;
     max-width: 350px;
   }
-  
+
   .project-image {
     /* height: 200px; */
   }
-  
+
   .project-name {
     font-size: 0.8rem;
   }
-  
+
   .project-description {
     font-size: 0.7rem;
   }
   .project-tech {
     gap: 4px;
   }
-  
+
   .slick-center .project-card {
     transition: transform var(--transition-medium);
   }
-  
+
   .slick-dots {
     bottom: -40px;
   }
@@ -329,60 +336,60 @@
   .work {
     padding: var(--spacing-lg) 0;
   }
-  
+
   .work .subtitle {
     font-size: clamp(0.8rem, 2vw, 1rem);
     max-width: 100%;
   }
-  
+
   .work-slider {
     margin: var(--spacing-lg) -20px 0;
     padding: 0 20px;
   }
-  
+
   .project-slide {
     padding: 0 var(--spacing-sm);
   }
-  
+
   .project-card {
     height: 420px;
     max-width: 300px;
   }
-  
+
   .project-content {
     padding: var(--spacing-sm);
   }
-  
+
   .project-header {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-xs);
   }
-  
+
   .project-date {
     align-self: flex-end;
   }
-  
+
   .project-name {
     font-size: 0.85rem;
     line-height: 1;
   }
-  
+
   .project-description {
     font-size: 0.7rem;
     line-height: 1;
   }
-  
+
   .project-overlay a {
     font-size: 0.8rem;
     padding: var(--spacing-xs) var(--spacing-sm);
   }
-  
+
   .tech-tag {
     font-size: 0.75rem;
     padding: 4px 8px;
   }
-  
+
   .slick-dots {
     bottom: -35px;
   }
@@ -393,68 +400,68 @@
   .work {
     padding: var(--spacing-md) 0;
   }
-  
+
   .work .subtitle {
     font-size: clamp(0.8rem, 1.8vw, 1rem);
   }
-  
+
   .work-slider {
     margin: var(--spacing-md) 0;
     padding: 0 10px;
   }
-  
+
   .project-slide {
     padding: 0 var(--spacing-xs);
   }
-  
+
   .project-card {
     height: 400px;
     max-width: 300px;
   }
-  
+
   .project-image {
     height: 160px;
   }
-  
+
   .project-content {
     padding: var(--spacing-sm);
   }
-  
+
   .project-name {
     font-size: 1rem;
   }
-  
+
   .project-description {
     font-size: 0.8rem;
   }
-  
+
   .project-date {
     font-size: 0.7rem;
     padding: 4px var(--spacing-xs);
   }
-  
+
   .project-tech {
     gap: 4px;
   }
-  
+
   .tech-tag {
     font-size: 0.7rem;
     padding: 4px 8px;
   }
-  
+
   .project-overlay a {
     font-size: 0.75rem;
     padding: var(--spacing-xs);
   }
-  
+
   .slick-dots {
     bottom: -30px;
   }
-  
+
   .slick-dots li {
     margin: 0 3px;
   }
-  
+
   .slick-dots li button:before {
     font-size: 10px;
   }

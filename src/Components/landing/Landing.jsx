@@ -3,15 +3,17 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import photo from "../../assets/work-photos/Profile_Photo_NEW.jpg";
-// import photo from "../../assets/images/5776080373275544281.jpg";
-
 
 import "./LandingStyle.css";
 
 function Landing(isNightMode) {
   useEffect(() => {
+    console.log("Landing mounted");
     Aos.init({ duration: 2000 });
-  });
+    return () => {
+      console.log("Landing unmounted");
+    };
+  }, []);
 
   return (
     <div className="landing" id="Landing">
@@ -34,8 +36,8 @@ function Landing(isNightMode) {
             </a>
           </div>
         </div>
-        <div className="photo-handler" data-aos="fade-left">
-          <div className="photo-wrapper">
+        <div className="photo-handler">
+          <div className="photo-wrapper" data-aos="fade-left">
             <div className="photo-inner">
               <img src={photo} alt="Abdelrahman Emad - Front-end Developer" />
             </div>

@@ -95,7 +95,11 @@ function Contact() {
             placeholder={`let's work together`}
             name="message"
           ></textarea>
-          <button className="btn-primary btn-small" type="submit" disabled={loading}>
+          <button
+            className="btn-primary btn-small"
+            type="submit"
+            disabled={loading}
+          >
             {done ? "✓ Sent!" : loading ? "Sending..." : "Submit!"}
           </button>
           {loading && <SquareLoader className="loader" loading={loading} />}
