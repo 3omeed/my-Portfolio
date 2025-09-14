@@ -37,7 +37,7 @@
 
 /* Project Card - Responsive Base */
 .project-card {
-  height: 400px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -58,7 +58,7 @@
 /* Project Image Container */
 .project-image {
   position: relative;
-  height: 260px;
+  height: 200px;
   overflow: hidden;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
@@ -107,7 +107,7 @@
 /* Project Content */
 .project-content {
   flex: 1;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
@@ -116,10 +116,11 @@
 /* Project Header */
 .project-header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xs);
 }
 
 .project-name {
@@ -131,10 +132,15 @@
   margin: 0;
   flex: 1;
 }
-
+.project-meta {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  align-items: center;
+}
 .project-date {
   font-family: "Poppins", sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--accent-color);
   background: rgba(99, 102, 241, 0.1);
@@ -144,7 +150,7 @@
 }
 .project-status {
   font-family: "Poppins", sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--bg-secondary);
   background: var(--accent-color);
@@ -167,14 +173,14 @@
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-2xs);
   margin-top: auto;
 }
 
 .tech-tag {
   font-family: "Poppins", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: 400;
   color: var(--text-primary);
   background: var(--bg-primary);
   border: 1px solid rgba(226, 232, 240, 0.3);
@@ -189,42 +195,41 @@
   border-color: var(--accent-color);
 }
 
-/* Slider Dots Customization */
-.slick-dots {
-  bottom: -50px;
-}
-
-.slick-dots li button:before {
+/* Custom Arrow Buttons */
+.slick-arrow-btn {
+  background: var(--main-color);
+  border: 2px solid var(--accent-color);
   color: var(--accent-color);
-  font-size: 12px;
-  opacity: 0.5;
-}
-
-.slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: var(--accent-color);
-}
-
-/* Slider Arrows */
-.slick-prev,
-.slick-next {
-  z-index: 10;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: -10%;
+  transform: translateX(100%);
+  z-index: 1002;
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-.slick-prev {
-  left: -50px;
+.slick-arrow-btn.next {
+  left: 50%;
 }
 
-.slick-next {
-  right: -50px;
+.slick-arrow-btn.prev {
+  left: 40%;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  font-size: 20px;
-  color: var(--accent-color);
+@media screen and (max-width: 576px) {
+  .slick-arrow-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
 }
 
 /* Responsive Design - Clean and Organized */
@@ -238,14 +243,6 @@
 
   .project-image {
     height: 240px;
-  }
-
-  .slick-prev {
-    left: -40px;
-  }
-
-  .slick-next {
-    right: -40px;
   }
 }
 
@@ -271,14 +268,6 @@
   .project-description {
     font-size: 0.8rem;
   }
-
-  .slick-prev {
-    left: -30px;
-  }
-
-  .slick-next {
-    right: -30px;
-  }
 }
 
 /* Tablet (768px and below) */
@@ -291,7 +280,6 @@
   .work-slider {
     margin: var(--spacing-xl) 0;
     padding: 0 var(--spacing-md);
-    overflow: hidden;
   }
 
   .work-slider .slick-list {
@@ -305,10 +293,6 @@
   .project-card {
     height: 400px;
     max-width: 350px;
-  }
-
-  .project-image {
-    /* height: 200px; */
   }
 
   .project-name {
@@ -326,8 +310,8 @@
     transition: transform var(--transition-medium);
   }
 
-  .slick-dots {
-    bottom: -40px;
+  .slick-arrow-btn {
+    bottom: -13%;
   }
 }
 
@@ -349,6 +333,22 @@
 
   .project-slide {
     padding: 0 var(--spacing-sm);
+  }
+  .slick-slider {
+    width: 100%;
+  }
+  .slick-arrow-btn {
+    bottom: -10%;
+  }
+  .slick-arrow-btn.prev {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-110%);
+  }
+  .slick-arrow-btn.next {
+    text-align: center;
+    left: 50%;
+    transform: translateX(10%);
   }
 
   .project-card {
@@ -388,10 +388,6 @@
   .tech-tag {
     font-size: 0.75rem;
     padding: 4px 8px;
-  }
-
-  .slick-dots {
-    bottom: -35px;
   }
 }
 
@@ -452,17 +448,5 @@
   .project-overlay a {
     font-size: 0.75rem;
     padding: var(--spacing-xs);
-  }
-
-  .slick-dots {
-    bottom: -30px;
-  }
-
-  .slick-dots li {
-    margin: 0 3px;
-  }
-
-  .slick-dots li button:before {
-    font-size: 10px;
   }
 }

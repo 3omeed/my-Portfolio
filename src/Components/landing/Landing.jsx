@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import photo from "../../assets/work-photos/Profile_Photo_NEW.jpg";
+import photo from "../../assets/images/profile-photo-st.png";
 
 import "./LandingStyle.css";
 
@@ -39,6 +39,7 @@ function Landing(isNightMode) {
         <div className="photo-handler">
           <div className="photo-wrapper" data-aos="fade-left">
             <div className="photo-inner">
+              <div className="photo-overlay"></div>
               <img src={photo} alt="Abdelrahman Emad - Front-end Developer" />
             </div>
           </div>

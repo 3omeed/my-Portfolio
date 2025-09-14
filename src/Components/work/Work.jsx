@@ -15,6 +15,8 @@ import FCCPortfolio from "../../assets/work-photos/portfolio.webp";
 import Meterika from "../../assets/work-photos/meterika-photo.webp";
 import eCommerce from "../../assets/work-photos/e-commerce.png";
 
+import Arrow from "./Arrow";
+
 function Work() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -79,7 +81,7 @@ function Work() {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -88,6 +90,8 @@ function Work() {
     pauseOnHover: true,
     centerMode: true,
     adaptiveHeight: true,
+    nextArrow: <Arrow direction="next" className="custom-next-arrow" />,
+    prevArrow: <Arrow direction="prev" className="custom-prev-arrow" />,
     responsive: [
       {
         breakpoint: 1024,
@@ -95,7 +99,6 @@ function Work() {
           slidesToShow: 3,
           slidesToScroll: 1,
           arrows: true,
-          dots: true,
           centerMode: true,
           centerPadding: "150px",
         },
@@ -105,8 +108,7 @@ function Work() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: false,
-          dots: true,
+          arrows: true,
           centerMode: true,
           centerPadding: "150px",
         },
@@ -116,8 +118,7 @@ function Work() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
-          dots: true,
+          arrows: true,
           centerMode: true,
           centerPadding: "50px",
         },
@@ -127,8 +128,7 @@ function Work() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
-          dots: true,
+          arrows: true,
           centerMode: false,
           centerPadding: "0px",
         },
@@ -173,8 +173,12 @@ function Work() {
                   <div className="project-content">
                     <div className="project-header">
                       <h3 className="project-name">{project.name}</h3>
-                      <span className="project-date">{project.date}</span>
-                      <span className="project-status">{project.inProgress ? "In Progress" : "Completed"}</span>
+                      <div className="project-meta">
+                        <span className="project-date">{project.date}</span>
+                        <span className="project-status">
+                          {project.inProgress ? "In Progress" : "Completed"}
+                        </span>
+                      </div>
                     </div>
 
                     <p className="project-description">{project.description}</p>
